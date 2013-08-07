@@ -1,3 +1,11 @@
+// Integrated Electronic Systems Lab
+// TU Darmstadt
+// Author:	Group 6
+// Email:
+//
+// Register module
+// manages the register set
+
 module registers(
   clk,
   rst,

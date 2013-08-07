@@ -1,3 +1,10 @@
+// Integrated Electronic Systems Lab
+// TU Darmstadt
+// Author:	Group 6
+// Email:
+//
+// Testbench for Register module.
+
 `timescale 1 ns / 1 ps
 
 module registers_tb ();

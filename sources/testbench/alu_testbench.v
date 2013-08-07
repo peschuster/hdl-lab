@@ -23,8 +23,8 @@ alu alu_i(
 	.i_imm(imm),
 	.i_rn(rn),
 	.i_sel(sel),
-	.o_result_r(result),
-	.o_apsr_r(apsr)
+	.o_result(result),
+	.o_apsr(apsr)
 );
 
 //memory ...

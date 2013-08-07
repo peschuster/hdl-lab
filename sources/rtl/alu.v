@@ -27,28 +27,27 @@
 //C - 1 if results in a carry condition (unsigned overflow); 0 else
 //V - 1 if results in a overflow condition (signed overflow); 0 else
 
-`timescale 1 ns / 1 ps
-
 module alu(
 	i_imm,
 	i_rn,
 	i_sel,
-	o_result_r,
-	o_apsr_r
+	o_result,
+	o_apsr
 );
 
-input wire [31:0] 	i_imm;
-input wire [31:0] 	i_rn;
-input wire [2:0] 	  i_sel;
-output reg [31:0] 	o_result_r;
-output reg [3:0] 	o_apsr_r;
+input logic [31:0] 	i_imm;
+input logic [31:0] 	i_rn;
+input logic [2:0]   i_sel;
 
-reg [32:0] iresult_r; 
+output logic [31:0] 	o_result;
+output logic [3:0]    o_apsr;
+
+logic [32:0]  iresult_r; 
 
 
 always@ (*) begin
   //reset APSR
-  o_apsr_r = 0;
+  o_apsr = 0;
 
   //calculate
   case (i_sel)
@@ -59,7 +58,7 @@ always@ (*) begin
       //sub
 		  iresult_r = i_rn - i_imm;
       if (iresult_r[32] == 1'b1) begin
-        o_apsr_r[3] = 1;
+        o_apsr[3] = 1;
       end
     end
     3'b001:
@@ -69,18 +68,18 @@ always@ (*) begin
       //mv (reg)
       iresult_r = i_rn;
     default:
-      // error ??
+      // error
       iresult_r = 0;
   endcase
 
   // set intermal result to output result
-  o_result_r = iresult_r[31:0];
+  o_result = iresult_r[31:0];
 
-  if (o_result_r == 0) begin
+  if (o_result == 0) begin
     //set Z flag
-    o_apsr_r[2] = 1;
+    o_apsr[2] = 1;
   end
  
 end
 
-endmodule 
+endmodule
