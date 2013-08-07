@@ -4,62 +4,62 @@ K3
 cModel Technology
 Z0 d/home/vhdlp21/git/hdl-lab/work/vsim
 valu
-Z1 Vkh?_HQP@JSH=f`U>5g87_3
+Z1 !s100 5<1=Da_5el@<79650:KiR0
+Z2 IcGoU7LeIL2?XKNF[NjILh1
+Z3 Vkh?_HQP@JSH=f`U>5g87_3
+Z4 d/home/vhdlp21/git/hdl-lab/work/vsim
+Z5 w1375871022
+Z6 8/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
+Z7 F/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
+L0 32
+Z8 OL;L;10.1c;51
 r1
 31
-Z2 IcGoU7LeIL2?XKNF[NjILh1
-Z3 d/home/vhdlp21/git/hdl-lab/work/vsim
-Z4 w1375867707
-Z5 8/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
-Z6 F/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
-L0 32
-Z7 OL;L;10.1c;51
-Z8 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!s85 0
-Z9 !s100 5<1=Da_5el@<79650:KiR0
-Z10 !s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
-Z11 !s108 1375868864.498806
+Z9 !s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
+Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z11 !s108 1375871237.965203
 Z12 !s107 /home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
 !i10b 1
+!s85 0
 valu_tb
-Z13 VL;=kgzZ7GJ2Reg7Z1GkmR2
+Z13 !s100 8Qn5P1if?GLBL1Se9?TzD0
+Z14 IYn2<FZ]P=cbkhk7KekXKS0
+Z15 VL;=kgzZ7GJ2Reg7Z1GkmR2
+R4
+R5
+Z16 8/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
+Z17 F/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
+L0 10
+R8
 r1
 31
-Z14 IYn2<FZ]P=cbkhk7KekXKS0
-R3
-R4
-Z15 8/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
-Z16 F/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
-L0 10
-R7
-R8
-!s85 0
-Z17 !s100 8Qn5P1if?GLBL1Se9?TzD0
 Z18 !s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
-Z19 !s108 1375868864.527436
+R10
+Z19 !s108 1375871238.008601
 Z20 !s107 /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
 !i10b 1
+!s85 0
 vdecode
 Z21 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z22 Ie>3GX^aXFV<d=@gN[e?kC3
-Z23 VIk<7o?YB6i8Yj4NJYMzdA1
+Z22 !s100 `czeZSlX`Z^>PD8eKIcLM0
+Z23 Ie>3GX^aXFV<d=@gN[e?kC3
+Z24 VIk<7o?YB6i8Yj4NJYMzdA1
+Z25 !s105 decode_v_unit
 S1
-R3
 R4
-Z24 8/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
-Z25 F/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
+R5
+Z26 8/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
+Z27 F/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
 L0 17
-R7
+R8
 r1
 31
-Z26 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-Z27 !s100 `czeZSlX`Z^>PD8eKIcLM0
-Z28 !s105 decode_v_unit
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
-Z30 !s108 1375868864.556742
-Z31 !s107 /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
+Z28 !s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
+Z29 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !i10b 1
 !s85 0
+Z30 !s108 1375871238.053591
+Z31 !s107 /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
 vdecode_tb
 R21
 !i10b 1
@@ -68,16 +68,16 @@ Z33 Ikg:eiTk6i_Q31ANLRBV=c0
 Z34 VCIP:j4GW:QWZS@[JX_XQ50
 Z35 !s105 decode_tb_v_unit
 S1
-R3
 R4
+R5
 Z36 8/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
 Z37 F/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
 L0 3
-R7
+R8
 r1
 !s85 0
 31
-!s108 1375869075.906467
+!s108 1375871238.099389
 !s107 /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v|
 Z38 !s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v|
-R26
+R29
