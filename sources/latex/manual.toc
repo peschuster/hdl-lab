@@ -1,0 +1,37 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Goals}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Expected Outcome}{3}{subsection.1.2}
+\contentsline {section}{\numberline {2}Primary Objectives}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Processor Design in Verilog}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Register-Transfer-Level Simulation and Verification}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Standard-Cell Synthesis}{4}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Synthesis for CMOS 65nm}{4}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Gate-Level Simulation and Verification}{5}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Place and Route (PAR)}{5}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Post-PAR Simulation}{5}{subsubsection.2.3.4}
+\contentsline {subsection}{\numberline {2.4}FPGA Synthesis}{5}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Design Preparation}{5}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Implementation and Debugging on XUPV5 Evaluation Board}{5}{subsubsection.2.4.2}
+\contentsline {section}{\numberline {3}Secondary Objectives}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Instruction/Data Chache}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Branch Prediction}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Superscalar Execution}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Balanced Pipeline}{7}{subsection.3.4}
+\contentsline {section}{\numberline {4}Best Practices}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Coding}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Tools}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Group Work}{9}{subsection.4.3}
+\contentsline {section}{\numberline {5}Deliverables}{10}{section.5}
+\contentsline {section}{\numberline {6}Examination - HDL Lab}{12}{section.6}
+\contentsline {section}{\numberline {7}Graduation Procedure}{14}{section.7}
+\contentsline {section}{\numberline {A}IES Servers and Tools}{15}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Login Procedure}{15}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}NxClient Configuration}{16}{subsection.A.2}
+\contentsline {section}{\numberline {B}Verilog and SystemVerilog Templates}{17}{appendix.B}
+\contentsline {section}{\numberline {C}Software Templates}{22}{appendix.C}
+\contentsline {subsection}{\numberline {C.1}Test Programs}{22}{subsection.C.1}
+\contentsline {subsection}{\numberline {C.2}Makefile and Linker Script}{28}{subsection.C.2}
+\contentsline {subsection}{\numberline {C.3}Design Compiler Configuration}{30}{subsection.C.3}
+\contentsline {section}{\numberline {D}Synthesis Script for Design Compiler}{31}{appendix.D}
+\contentsline {section}{\numberline {E}Gate-Level-Simulation Script for Modelsim}{33}{appendix.E}
