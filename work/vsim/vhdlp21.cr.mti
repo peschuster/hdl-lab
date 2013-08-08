@@ -12,6 +12,13 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	testbench
 
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/control.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/control.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module control
+
+Top level modules:
+	control
+
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ir_cache_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ir_cache_ctrl.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module ir_cache_ctrl
@@ -33,12 +40,26 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	addr_ctrl_tb
 
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_mem.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_mem.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ctrl_mem
+
+Top level modules:
+	ctrl_mem
+
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/mem_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/mem_ctrl.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module mem_ctrl
 
 Top level modules:
 	mem_ctrl
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_wb.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_wb.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ctrl_wb
+
+Top level modules:
+	ctrl_wb
 
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/ir_cache_ctrl_tb.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/ir_cache_ctrl_tb.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
@@ -82,11 +103,22 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	registers
 
-} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_id.v {2 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_id.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module cpu
+-- Compiling module ctrl_id
+** Warning: /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_id.v(13): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_id.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_id.v(15): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_id.v(16): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
 Top level modules:
-	cpu
+	ctrl_id
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_ex.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_ex.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ctrl_ex
+
+Top level modules:
+	ctrl_ex
 
 } {} {}}

@@ -28,15 +28,15 @@ output logic        o_mem_rd_en;
 output logic [0:1]  o_mem_wr_en;
 
 
+logic        rd_wr_en, stall;
 logic [ 3:0] apsr_r;
 logic [ 1:0] addr_mode; // 00: normal (+2), 01: alu-addr (ir memory), 10: mem-addr (pop), 11: alu-addr (data memory)
 logic [ 3:0] addr_rn_r, addr_rd_r, addr_rt_r;
 logic [31:0] imm_r;
 logic [31:0] rd_r, alu;
 logic [31:0] pc, pc_next, rn_r, rt_r;
-logic rd_wr_en;
-logic [3:0] apsr_alu;
-logic [2:0] alu_sel;
+logic [ 3:0] apsr_alu;
+logic [ 2:0] alu_sel;
 
 // mem signals
 logic [ 1:0]            wr_mode;
@@ -44,7 +44,8 @@ logic [ 1:0]            rd_mode;
 logic [31:0]            mem_do;
 logic [ADDR_WIDTH-1:0]  mem_addr;
 
-
+//
+logic [15:0]            ir_id;
 
 always_ff @(posedge clk) begin
   if (rst) begin
@@ -57,27 +58,23 @@ always_ff @(posedge clk) begin
   end
 end
 
-
-
-decode decode_inst (
-  .clk(clk),
-  .rst(rst),
-
-  // inputs  
-  .i_ir(mem_do[15:0]),
-  .i_apsr(apsr_r),
+// cross-stage control module
+control control_inst(
+  .clk (clk),
+  .rst (rst),
   
-  // outputs
-  .o_addrrn_r(addr_rn_r),
-  .o_addrrd_r(addr_rd_r),
-  .o_addrrt_r(addr_rt_r),
-  .o_imm_r(imm_r),
-  .o_mode_r(addr_mode),
-  .o_alusel_r (alu_sel)
+  .i_ir_id (ir_id),
+
+  .o_stall (stall),  
+  .o_alu_sel (alu_sel),
+  .o_addr_rd_r (addr_rd_r),
+  .o_registers_rd_en (rd_wr_en)
 );
 
+//
+// IF stage
 
-
+// controller for pc and mem address
 addr_ctrl #(.MEM_DEPTH(MEM_DEPTH)) addr_ctrl_inst(
   .rst(rst),
   .i_mode(addr_mode),
@@ -88,34 +85,7 @@ addr_ctrl #(.MEM_DEPTH(MEM_DEPTH)) addr_ctrl_inst(
   .o_pc(pc_next)
 );
 
-
-
-registers registers_inst (
-  .clk (clk), 
-  .rst (rst), 
-  .i_rd_wr_en (rd_wr_en),
-
-  .i_addr_rn (addr_rn_r), 
-  .i_addr_rd (addr_rd_r), 
-  .i_addr_rt (addr_rt_r),
-  .i_rd (rd_r), 
-  .i_pc (pc_next),
-
-  .o_rn_r (rn_r), 
-  .o_rt_r (rt_r), 
-  .o_pc_r (pc)
-);
-
-
-
-alu alu_inst(
-  .i_imm (imm_r),
-  .i_rn (rn_r),
-  .i_sel (alu_sel),
-  .o_result_r (alu),
-  .o_apsr_r (apsr_alu)
-);
-
+// memory
 assign wr_mode = 0;
 assign rd_mode = 1;
 
@@ -137,6 +107,62 @@ mem_ctrl #(.MEM_DEPTH(MEM_DEPTH)) mem_ctrl_inst(
   .o_en (o_mem_en), 
   .o_rd_en (o_mem_rd_en),
   .o_wr_en (o_mem_wr_en)
+);
+
+//
+// ID stage
+
+ir_cache_ctrl ir_cache_ctrl_inst (
+  .clk(clk),
+  .rst(rst),
+  .stall(stall),
+
+  .i_data(mem_do[15:0]),
+  .o_data(ir_id)
+);
+
+// ir decoder
+decode decode_inst (
+  .clk(clk),
+  .rst(rst),
+
+  // inputs  
+  .i_ir(ir_id),
+  .i_apsr(apsr_r),
+  
+  // outputs
+  .o_addrrn_r(addr_rn_r),
+  .o_addrrt_r(addr_rt_r),
+  .o_imm_r(imm_r),
+  .o_mode_r(addr_mode)
+);
+
+// Register file
+registers registers_inst (
+  .clk (clk), 
+  .rst (rst), 
+  .i_rd_wr_en (rd_wr_en),
+
+  .i_addr_rn (addr_rn_r), 
+  .i_addr_rd (addr_rd_r), 
+  .i_addr_rt (addr_rt_r),
+  .i_rd (rd_r), 
+  .i_pc (pc_next),
+
+  .o_rn_r (rn_r), 
+  .o_rt_r (rt_r), 
+  .o_pc_r (pc)
+);
+
+//
+// EX stage
+
+alu alu_inst(
+  .i_imm (imm_r),
+  .i_rn (rn_r),
+  .i_sel (alu_sel),
+  .o_result_r (alu),
+  .o_apsr_r (apsr_alu)
 );
 
 endmodule
