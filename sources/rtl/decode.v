@@ -70,7 +70,7 @@ always_ff @(posedge clk) begin
           end
         9'b101100001: begin // SUB SP
             o_imm_r <= { { 25 { 1'b0 } }, i_ir[6:0]};
-            o_addrrn_r <= 13; // warum 13????
+            o_addrrn_r <= 13; // Stackpointer-Adresse
             addrrd_pre1_r <= 13;
             o_alusel_r <= 3'b101;
           end

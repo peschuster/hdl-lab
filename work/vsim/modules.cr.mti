@@ -1,0 +1,29 @@
+/home/vhdlp6/git/hdl-lab/sources/rtl/ctrl_wb.v {1 {vlog -work work -vopt -sv /home/vhdlp6/git/hdl-lab/sources/rtl/ctrl_wb.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ctrl_wb
+
+Top level modules:
+	ctrl_wb
+
+} {} {}} /home/vhdlp6/git/hdl-lab/sources/rtl/ctrl_id.v {1 {vlog -work work -vopt -sv /home/vhdlp6/git/hdl-lab/sources/rtl/ctrl_id.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ctrl_id
+
+Top level modules:
+	ctrl_id
+
+} {} {}} /home/vhdlp6/git/hdl-lab/sources/rtl/ctrl_ex.v {1 {vlog -work work -vopt -sv /home/vhdlp6/git/hdl-lab/sources/rtl/ctrl_ex.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ctrl_ex
+
+Top level modules:
+	ctrl_ex
+
+} {} {}} /home/vhdlp6/git/hdl-lab/sources/rtl/ctrl_mem.v {1 {vlog -work work -vopt -sv /home/vhdlp6/git/hdl-lab/sources/rtl/ctrl_mem.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ctrl_mem
+
+Top level modules:
+	ctrl_mem
+
+} {} {}}
