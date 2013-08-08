@@ -45,16 +45,52 @@ output logic [2:0] o_alusel_r;
 // pipeline stages for shift register
 logic [3:0] addrrd_pre1_r, addrrd_pre2_r;
 
-// is set if the APSR should be read
-logic condition_check_r;
 
+always_comb begin
+
+  if (rst) begin
+      o_addrrn_r <= 0;
+      o_addrrt_r <= 0;
+    end
+  else
+    begin
+
+      casez (i_ir[15:7])
+        9'b0001110??: begin // ADD
+            o_addrrn_r <= i_ir[5:3];
+          end
+        9'b101100001: begin // SUB SP
+            o_addrrn_r <= 13; // 13=SP
+          end
+        9'b00100????: begin // MOV IMM
+          end
+        9'b01000110?: begin // MOV REG
+            o_addrrn_r <= i_ir[6:3];
+          end
+        9'b01101????: begin // LDR
+            o_addrrn_r <= i_ir[5:3];
+          end
+        9'b01100????: begin // STR
+            o_addrrn_r <= i_ir[5:3];
+            o_addrrt_r <= i_ir[2:0];
+          end
+        9'b1101?????: begin // B
+            o_addrrn_r <= 15; // PC register
+          end
+        9'b00101????: begin // CMP
+            o_addrrn_r <= i_ir[10:8];
+          end
+        default:     begin // error
+            o_addrrn_r <= 0;
+          end
+      endcase;
+    end
+end
 
 always_ff @(posedge clk) begin
 
   if (rst) begin
       o_imm_r <= 0;
-      o_addrrn_r <= 0;
-      o_addrrt_r <= 0;
       addrrd_pre1_r <= 0;
       o_alusel_r <= 3'b001;
     end
@@ -64,13 +100,11 @@ always_ff @(posedge clk) begin
       casez (i_ir[15:7])
         9'b0001110??: begin // ADD
             o_imm_r <= i_ir[8:6];
-            o_addrrn_r <= i_ir[5:3];
             addrrd_pre1_r <= i_ir[2:0];
             o_alusel_r <= 3'b000;
           end
         9'b101100001: begin // SUB SP
             o_imm_r <= { { 25 { 1'b0 } }, i_ir[6:0]};
-            o_addrrn_r <= 13; // warum 13????
             addrrd_pre1_r <= 13;
             o_alusel_r <= 3'b101;
           end
@@ -81,52 +115,32 @@ always_ff @(posedge clk) begin
           end
         9'b01000110?: begin // MOV REG
             o_imm_r <= 32'h00000000;
-            o_addrrn_r <= i_ir[6:3];
             addrrd_pre1_r <= i_ir[2:0];
             o_alusel_r <= 3'b010;
           end
         9'b01101????: begin // LDR
             o_imm_r <= { { 27 { 1'b0 } }, i_ir[10:6]};
-            o_addrrn_r <= i_ir[5:3];
             addrrd_pre1_r <= i_ir[2:0];
             o_alusel_r <= 3'b000;
           end
         9'b01100????: begin // STR
             o_imm_r <= { { 27 { 1'b0 } }, i_ir[10:6]};
-            o_addrrn_r <= i_ir[5:3];
-            o_addrrt_r <= i_ir[2:0];
             o_alusel_r <= 3'b000;
           end
         9'b1101?????: begin // B
             o_imm_r <= { { 24 { i_ir[7] } }, i_ir[6:0], 1'b0 }; // SignExtend(i_ir[7:0]:'0')
-            o_addrrn_r <= 15; // PC register
             o_alusel_r <= 3'b000;
           end
         9'b00101????: begin // CMP
             o_imm_r <= { { 24 { 1'b0 } }, i_ir[7:0]};
-            o_addrrn_r <= i_ir[10:8];
             o_alusel_r <= 3'b101;
           end
         default:     begin // error
             o_imm_r <= 32'h00000000;
-            o_addrrn_r <= 0;
             o_alusel_r <= 3'b001;
           end
       endcase;
     end
-end
-
-// Condition pipeline
-always_ff @(posedge clk) begin
-  if (rst == 1) begin
-      condition_check_r <= 0;
-    end
-  else if (i_ir[15:12] == 4'b1101) begin
-      condition_check_r <= 1;
-    end 
-  else begin
-    condition_check_r <= 0;
-  end
 end
 
 // Shift registers
@@ -150,9 +164,9 @@ always_ff @(posedge clk) begin
   if (rst) begin
       o_mode_r <= 0;
     end
-  else if (condition_check_r) begin
+  else if (i_ir[15:12] == 4'b1101) begin
       if (i_apsr[2] == 1 || i_apsr[3] != i_apsr[0]) 
-        o_mode_r <= 2;
+        o_mode_r <= 1;  // 01: alu-addr (IR)
       else
         o_mode_r <= 0;
     end
