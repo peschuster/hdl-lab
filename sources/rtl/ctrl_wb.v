@@ -9,6 +9,7 @@ module ctrl_wb (
 
 input   logic         clk, rst;
 input   logic[15:0]   i_ir_wb;
+input   logic         i_stall;
 
 output  logic         o_registers_rd_en;
 output  logic[3:0]    o_addr_rd_r;
@@ -20,6 +21,10 @@ always_ff @(posedge clk) begin
   if (rst) begin
       o_addr_rd_r <= 0;
       o_registers_rd_en <= 0;
+    end
+  else if(i_stall) begin
+      o_registers_rd_en <= 0;
+      o_addr_rd_r <= o_addr_rd_r;
     end
   else
     begin
