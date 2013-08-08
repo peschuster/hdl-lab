@@ -12,13 +12,6 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	testbench
 
-} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/control.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/control.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module control
-
-Top level modules:
-	control
-
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ir_cache_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ir_cache_ctrl.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module ir_cache_ctrl
@@ -53,6 +46,13 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 
 Top level modules:
 	mem_ctrl
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/stall_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/stall_ctrl.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module stall_ctrl
+
+Top level modules:
+	stall_ctrl
 
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012

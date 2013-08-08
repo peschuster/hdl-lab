@@ -25,7 +25,7 @@ output  logic[ 2:0]     o_alu_sel;
 output  logic[ 3:0]     o_addr_rd_r;
 output  logic           o_stall_id, o_stall_ex, o_stall_mem, o_stall_wb, o_registers_rd_en_r;
 
-        logic           stall, stall_id, stall_ex, stall_mem, stall_wb, branch_met;
+        logic           stall_id, stall_ex, stall_mem, stall_wb, branch_met;
         logic[ 3:0]     mem_data_access;
         logic[15:0]     ir_ex, ir_2mem;
         logic[15:0]     ir_2wb;
@@ -60,8 +60,6 @@ always_comb begin
   end
 end
 // temp end
-
-assign o_stall = stall;
 
 stall_ctrl stall_ctrl_inst (
   .clk (clk),
