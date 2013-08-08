@@ -4,80 +4,122 @@ K3
 cModel Technology
 Z0 d/home/vhdlp21/git/hdl-lab/work/vsim
 valu
-Z1 !s100 5<1=Da_5el@<79650:KiR0
-Z2 IcGoU7LeIL2?XKNF[NjILh1
-Z3 Vkh?_HQP@JSH=f`U>5g87_3
-Z4 d/home/vhdlp21/git/hdl-lab/work/vsim
-Z5 w1375871022
-Z6 8/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
-Z7 F/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
+IcGoU7LeIL2?XKNF[NjILh1
+Vkh?_HQP@JSH=f`U>5g87_3
+Z1 d/home/vhdlp21/git/hdl-lab/work/vsim
+Z2 w1375871022
+8/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
+F/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
 L0 32
-Z8 OL;L;10.1c;51
+Z3 OL;L;10.1c;51
 r1
 31
-Z9 !s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
-Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-Z11 !s108 1375871237.965203
-Z12 !s107 /home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
+Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 5<1=Da_5el@<79650:KiR0
+!s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
+!s108 1375871237.965203
+!s107 /home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
 !i10b 1
 !s85 0
 valu_tb
-Z13 !s100 8Qn5P1if?GLBL1Se9?TzD0
-Z14 IYn2<FZ]P=cbkhk7KekXKS0
-Z15 VL;=kgzZ7GJ2Reg7Z1GkmR2
-R4
-R5
-Z16 8/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
-Z17 F/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
+IYn2<FZ]P=cbkhk7KekXKS0
+VL;=kgzZ7GJ2Reg7Z1GkmR2
+R1
+R2
+8/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
+F/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
 L0 10
-R8
+R3
 r1
 31
-Z18 !s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
-R10
-Z19 !s108 1375871238.008601
-Z20 !s107 /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
+R4
+!s100 8Qn5P1if?GLBL1Se9?TzD0
+!s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
+!s108 1375871238.008601
+!s107 /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
 !i10b 1
 !s85 0
 vdecode
-Z21 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z22 !s100 `czeZSlX`Z^>PD8eKIcLM0
-Z23 Ie>3GX^aXFV<d=@gN[e?kC3
-Z24 VIk<7o?YB6i8Yj4NJYMzdA1
-Z25 !s105 decode_v_unit
+Z5 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Ie>3GX^aXFV<d=@gN[e?kC3
+VIk<7o?YB6i8Yj4NJYMzdA1
 S1
-R4
-R5
-Z26 8/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
-Z27 F/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
+R1
+R2
+8/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
+F/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
 L0 17
-R8
+R3
 r1
 31
-Z28 !s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
-Z29 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z6 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 `czeZSlX`Z^>PD8eKIcLM0
+!s105 decode_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
+!s108 1375871238.053591
+!s107 /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
 !i10b 1
 !s85 0
-Z30 !s108 1375871238.053591
-Z31 !s107 /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
 vdecode_tb
-R21
-!i10b 1
-Z32 !s100 JKEoT_27>cJZVMW2M8Zol3
-Z33 Ikg:eiTk6i_Q31ANLRBV=c0
-Z34 VCIP:j4GW:QWZS@[JX_XQ50
-Z35 !s105 decode_tb_v_unit
-S1
-R4
 R5
-Z36 8/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
-Z37 F/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
+Ikg:eiTk6i_Q31ANLRBV=c0
+VCIP:j4GW:QWZS@[JX_XQ50
+S1
+R1
+R2
+8/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
+F/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
 L0 3
-R8
+R3
 r1
-!s85 0
 31
+R6
+!s100 JKEoT_27>cJZVMW2M8Zol3
+!s105 decode_tb_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v|
 !s108 1375871238.099389
 !s107 /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v|
-Z38 !s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v|
-R29
+!i10b 1
+!s85 0
+vir_cache_ctrl
+R5
+V4MmQKO<N4R5;3iMbn?hD33
+r1
+!s85 0
+31
+Ijf9<<O_n3mRM9RJgo7:6n0
+!s105 ir_cache_ctrl_v_unit
+S1
+Z7 d/home/vhdlp6/git/hdl-lab/work/vsim
+w1375951772
+8/home/vhdlp6/git/hdl-lab/sources/rtl/ir_cache_ctrl.v
+F/home/vhdlp6/git/hdl-lab/sources/rtl/ir_cache_ctrl.v
+L0 1
+R3
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp6/git/hdl-lab/sources/rtl/ir_cache_ctrl.v|
+R6
+!i10b 1
+!s100 j<7M@VfW]E]`iom:eS;d33
+!s108 1375951774.517872
+!s107 /home/vhdlp6/git/hdl-lab/sources/rtl/ir_cache_ctrl.v|
+vir_cache_ctrl_tb
+R5
+VK>YA:=3nVPZ]`RXE5LKoz3
+r1
+31
+IR8f_gDQzo9F2OzZ<Nn4ja3
+S1
+R7
+w1375950903
+8/home/vhdlp6/git/hdl-lab/sources/testbench/ir_cache_ctrl_tb.v
+F/home/vhdlp6/git/hdl-lab/sources/testbench/ir_cache_ctrl_tb.v
+L0 3
+R3
+R6
+!s100 XK2IgQEQ5:CDDoWB[S?O<0
+!s105 ir_cache_ctrl_tb_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp6/git/hdl-lab/sources/testbench/ir_cache_ctrl_tb.v|
+!s108 1375951663.551960
+!s107 /home/vhdlp6/git/hdl-lab/sources/testbench/ir_cache_ctrl_tb.v|
+!s85 0
+!i10b 1

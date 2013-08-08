@@ -7,4 +7,66 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
+# Project file /home/vhdlp6/project/work/vsim/hdllab2013.mpf was not found.
+# Unable to open project.
+project open /home/vhdlp6/project/work/vsim/hdllab2013
+# Project file /home/vhdlp6/project/work/vsim/hdllab2013.mpf was not found.
+# Unable to open project.
 # Loading project modules
+# Compile of ir_cache_ctrl.v was successful.
+# Compile of ir_cache_ctrl_tb.v was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -novopt work.ir_cache_ctrl_tb
+# vsim -novopt work.ir_cache_ctrl_tb 
+# Refreshing /home/vhdlp6/git/hdl-lab/work/vsim/work.ir_cache_ctrl_tb
+# Loading sv_std.std
+# Loading work.ir_cache_ctrl_tb
+# Refreshing /home/vhdlp6/git/hdl-lab/work/vsim/work.ir_cache_ctrl
+# Loading work.ir_cache_ctrl
+add wave -position insertpoint  \
+sim:/ir_cache_ctrl_tb/clk \
+sim:/ir_cache_ctrl_tb/rst \
+sim:/ir_cache_ctrl_tb/stall \
+sim:/ir_cache_ctrl_tb/i_data \
+sim:/ir_cache_ctrl_tb/o_data
+run
+run
+add wave -position insertpoint  \
+sim:/ir_cache_ctrl_tb/dut/stall_r \
+sim:/ir_cache_ctrl_tb/dut/ir_cache
+restart
+# Loading sv_std.std
+# Loading work.ir_cache_ctrl_tb
+# Loading work.ir_cache_ctrl
+run
+# Compile of ir_cache_ctrl.v was successful.
+# Compile of ir_cache_ctrl_tb.v was successful.
+# 2 compiles, 0 failed with no errors. 
+restart
+# Refreshing /home/vhdlp6/git/hdl-lab/work/vsim/work.ir_cache_ctrl_tb
+# Loading sv_std.std
+# Loading work.ir_cache_ctrl_tb
+# Refreshing /home/vhdlp6/git/hdl-lab/work/vsim/work.ir_cache_ctrl
+# Loading work.ir_cache_ctrl
+run
+# Compile of ir_cache_ctrl.v was successful.
+# Compile of ir_cache_ctrl_tb.v was successful.
+# 2 compiles, 0 failed with no errors. 
+restart
+# Refreshing /home/vhdlp6/git/hdl-lab/work/vsim/work.ir_cache_ctrl_tb
+# Loading sv_std.std
+# Loading work.ir_cache_ctrl_tb
+# Refreshing /home/vhdlp6/git/hdl-lab/work/vsim/work.ir_cache_ctrl
+# Loading work.ir_cache_ctrl
+# Warning in wave window restart: (vish-4014) No objects found matching '/ir_cache_ctrl_tb/dut/stall_r'. 
+add wave -position insertpoint  \
+sim:/ir_cache_ctrl_tb/dut/stall_1_r \
+sim:/ir_cache_ctrl_tb/dut/stall_2_r
+run
+# Compile of ir_cache_ctrl.v was successful.
+restart
+# Loading sv_std.std
+# Loading work.ir_cache_ctrl_tb
+# Refreshing /home/vhdlp6/git/hdl-lab/work/vsim/work.ir_cache_ctrl
+# Loading work.ir_cache_ctrl
+run
