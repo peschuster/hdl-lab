@@ -45,8 +45,8 @@ always_ff @(posedge clk) begin
   else begin
     regs_r[PC] <= i_pc;
 
-    o_rn_r <= regs_r[i_addr_rn];
-    o_rt_r <= regs_r[i_addr_rt];
+    o_rn_r <= i_addr_rn == PC ? i_pc : regs_r[i_addr_rn];
+    o_rt_r <= i_addr_rt == PC ? i_pc : regs_r[i_addr_rt];
     
     if (i_rd_wr_en) begin
       regs_r[i_addr_rd] <= i_rd;

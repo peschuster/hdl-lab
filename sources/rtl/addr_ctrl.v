@@ -1,39 +1,62 @@
-module pc_ctrl (
-  i_mode, // 00: stall, 01: normal (+2), 10: branch
+module addr_ctrl (
+  rst,
+  i_mode, // 00: normal (+2), 01: alu-addr (ir memory), 10: mem-addr (pop), 11: alu-addr (data memory)
   i_pc,
-  i_branch,
-
+  i_alu_addr,
+  i_mem_addr,
+  
+  o_addr,
   o_pc
 );
-
-input logic [ 1:0] i_mode; // 00: stall, 01: normal (+2), 10: branch
-input logic [31:0] i_pc;
-input logic [31:0] i_branch;
-
-output logic [31:0] o_pc;
 
 parameter	MEM_DEPTH	= 2**12;
 
 //addresses this many Bytes (1Byte = 8bit)
 localparam	ADDR_WIDTH	= $clog2(MEM_DEPTH*2);
 
-logic [ADDR_WIDTH:0] step;
-logic [ADDR_WIDTH:0] result;
+localparam [1:0]
+  MODE_NORMAL = 0,
+  MODE_ALU_IR = 1,
+  MODE_MEM = 2,
+  MODE_ALU_DATA = 3;
 
-assign step = i_mode == 1 ? 2 : i_branch[ADDR_WIDTH:0];
-assign result = i_pc[ADDR_WIDTH:0] + step;
+input logic        rst;
+input logic [ 1:0] i_mode;
+input logic [31:0] i_pc, i_alu_addr, i_mem_addr;
+
+output logic [31:0] o_pc;
+output logic [ADDR_WIDTH-1:0] o_addr;
 
 always_comb begin
-  case (i_mode)
-    2'b00: // stall
-      o_pc <= i_pc;
-    2'b01: // normal
-      o_pc <= result;
-    2'b10: // branch
-      o_pc <= result;
-    default:
-      o_pc <= i_pc;      
-  endcase
+  if (rst) begin
+    o_addr <= 0;
+  end else begin
+    case (i_mode)
+      MODE_NORMAL:
+        o_addr <= i_pc;
+      MODE_ALU_IR:
+        o_addr <= i_alu_addr;
+      MODE_MEM:
+        o_addr <= i_mem_addr;
+      MODE_ALU_DATA:
+        o_addr <= i_alu_addr;
+      default:
+        o_addr <= i_pc;      
+    endcase
+  end
+end
+
+always_comb begin
+  if (rst) begin
+    o_pc <= 0;
+  end 
+  else if (i_mode == MODE_ALU_DATA) begin
+    o_pc <= i_pc;
+  end
+  else begin
+    o_pc <= o_addr + 2;
+  end
 end
 
 endmodule
+

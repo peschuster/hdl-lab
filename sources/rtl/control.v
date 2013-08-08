@@ -4,16 +4,20 @@ module control(
   
   i_alu_sel,
   i_ir_cache,
+  i_stall,
   
-  o_alu_sel
+  o_alu_sel,
+  o_addr_rd_r,
+  o_registers_rd_en
 );
 
 input   logic           clk, rst;
+input   logic           stall;
 input   logic[ 2:0]     i_alu_sel;
 input   logic[15:0]     i_ir_cache;
 
 output  logic[ 2:0]     o_alu_sel;
-output  logic[ 3:0]     o_adr_rd_r;
+output  logic[ 3:0]     o_addr_rd_r;
 output  logic           o_registers_rd_en;
 
         logic[ 2:0]     alu_sel;
