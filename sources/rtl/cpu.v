@@ -68,7 +68,7 @@ control control_inst(
   .o_stall (stall),  
   .o_alu_sel (alu_sel),
   .o_addr_rd_r (addr_rd_r),
-  .o_registers_rd_en (rd_wr_en)
+  .o_registers_rd_en_r (rd_wr_en)
 );
 
 //
