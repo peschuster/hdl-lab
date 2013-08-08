@@ -3,81 +3,231 @@ K3
 13
 cModel Technology
 Z0 d/home/vhdlp21/git/hdl-lab/work/vsim
-valu
-Z1 !s100 5<1=Da_5el@<79650:KiR0
-Z2 IcGoU7LeIL2?XKNF[NjILh1
-Z3 Vkh?_HQP@JSH=f`U>5g87_3
-Z4 d/home/vhdlp21/git/hdl-lab/work/vsim
-Z5 w1375871022
-Z6 8/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
-Z7 F/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
-L0 32
-Z8 OL;L;10.1c;51
+vaddr_ctrl
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+V?;=homzMN9Q@o4BJ@cI<V3
 r1
 31
-Z9 !s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
-Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-Z11 !s108 1375871237.965203
-Z12 !s107 /home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
-!i10b 1
-!s85 0
-valu_tb
-Z13 !s100 8Qn5P1if?GLBL1Se9?TzD0
-Z14 IYn2<FZ]P=cbkhk7KekXKS0
-Z15 VL;=kgzZ7GJ2Reg7Z1GkmR2
-R4
-R5
-Z16 8/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
-Z17 F/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
-L0 10
-R8
-r1
-31
-Z18 !s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
-R10
-Z19 !s108 1375871238.008601
-Z20 !s107 /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
-!i10b 1
-!s85 0
-vdecode
-Z21 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z22 !s100 `czeZSlX`Z^>PD8eKIcLM0
-Z23 Ie>3GX^aXFV<d=@gN[e?kC3
-Z24 VIk<7o?YB6i8Yj4NJYMzdA1
-Z25 !s105 decode_v_unit
+I0W_zm8?jUDgA>^bRJl=<81
 S1
-R4
-R5
-Z26 8/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
-Z27 F/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
-L0 17
-R8
-r1
-31
-Z28 !s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
-Z29 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!i10b 1
+Z2 d/home/vhdlp21/git/hdl-lab/work/vsim
+w1375949581
+8/home/vhdlp21/git/hdl-lab/sources/rtl/addr_ctrl.v
+F/home/vhdlp21/git/hdl-lab/sources/rtl/addr_ctrl.v
+L0 1
+Z3 OL;L;10.1c;51
+Z4 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 Y^QVG0HE<IIozCNLhCSNj0
+!s105 addr_ctrl_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/addr_ctrl.v|
+!s108 1375951132.829789
+!s107 /home/vhdlp21/git/hdl-lab/sources/rtl/addr_ctrl.v|
 !s85 0
-Z30 !s108 1375871238.053591
-Z31 !s107 /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
-vdecode_tb
-R21
 !i10b 1
-Z32 !s100 JKEoT_27>cJZVMW2M8Zol3
-Z33 Ikg:eiTk6i_Q31ANLRBV=c0
-Z34 VCIP:j4GW:QWZS@[JX_XQ50
-Z35 !s105 decode_tb_v_unit
+vaddr_ctrl_tb
+R1
+IC_eYVgZFbBcF3QN]9Io^Q2
+VF90U>UjcQWA:_6DL2^V3;0
 S1
-R4
-R5
-Z36 8/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
-Z37 F/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
+R2
+w1375950308
+8/home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v
+F/home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v
 L0 3
-R8
+R3
+r1
+31
+R4
+!s100 E5C:Ye7JnJ>z3MJ;DE<?12
+!s105 addr_ctrl_tb_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v|
+!s108 1375951132.973248
+!s107 /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v|
+!i10b 1
+!s85 0
+valu
+R1
+Vkh?_HQP@JSH=f`U>5g87_3
+r1
+31
+IbS2z6]9eJMQHgk]i?mPJZ2
+S1
+R2
+Z5 w1375946496
+8/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
+F/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
+L0 3
+R3
+R4
+!s100 ^YHLc]<RSz1iE:45KbbMl3
+!s105 alu_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
+!s108 1375951132.687714
+!s107 /home/vhdlp21/git/hdl-lab/sources/rtl/alu.v|
+!s85 0
+!i10b 1
+valu_tb
+IYn2<FZ]P=cbkhk7KekXKS0
+VL;=kgzZ7GJ2Reg7Z1GkmR2
+R2
+w1375871022
+8/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
+F/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
+L0 10
+R3
+r1
+31
+o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s107 /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
+!s100 8Qn5P1if?GLBL1Se9?TzD0
+!s90 -reportprogress|300|-work|work|-vopt|/home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v|
+!s108 1375871238.008601
+!i10b 1
+!s85 0
+vcpu
+R1
+VAP2P6X[DLhlAYKmPcZ0dJ0
+r1
+31
+IzW3h@ElY3mg386MQEznY<1
+S1
+R2
+w1375950862
+8/home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v
+F/home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v
+L0 1
+R3
+R4
+!s100 IZg4SzFJ;BEiS:Eck5FQm1
+!s105 cpu_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v|
+!s108 1375951132.865693
+!s107 /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v|
+!s85 0
+!i10b 1
+vdecode
+R1
+VIk<7o?YB6i8Yj4NJYMzdA1
 r1
 !s85 0
 31
-!s108 1375871238.099389
+IFCRcec553J@oWGIVz?R@A1
+!s105 decode_v_unit
+S1
+R2
+w1375952135
+8/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
+F/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
+L0 17
+R3
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
+R4
+!i10b 1
+!s100 V@fF@=a8;0YN[Q7GY`8Cc0
+!s108 1375952151.166972
+!s107 /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v|
+vdecode_tb
+R1
+I]XATliG=KKH1jT[9:PfYa0
+VCIP:j4GW:QWZS@[JX_XQ50
+S1
+R2
+Z6 w1375946630
+8/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
+F/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
+L0 3
+R3
+r1
+31
+R4
+!s100 ;gZ:HU=S[?GfQO:<b2=`[3
+!s105 decode_tb_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v|
+!s108 1375951132.798521
 !s107 /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v|
-Z38 !s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v|
-R29
+!i10b 1
+!s85 0
+vmem_ctrl
+R1
+V_ZWUSDfik0^e<mbgXha8Y2
+r1
+31
+IbcWR3GX`]`@J[]49]XZH@1
+S1
+R2
+R5
+8/home/vhdlp21/git/hdl-lab/sources/rtl/mem_ctrl.v
+F/home/vhdlp21/git/hdl-lab/sources/rtl/mem_ctrl.v
+L0 1
+R3
+R4
+!s100 bi4NNJ>`QToh;CVcJjl8[1
+!s105 mem_ctrl_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/mem_ctrl.v|
+!s108 1375951132.897986
+!s107 /home/vhdlp21/git/hdl-lab/sources/rtl/mem_ctrl.v|
+!s85 0
+!i10b 1
+vmemory
+R1
+V7aEO3?JkbCmK3DlaSj4fC1
+r1
+31
+I6B[In2C2m;1:jzZ[lYif91
+S1
+R2
+R6
+8/home/vhdlp21/git/hdl-lab/sources/testbench/memory.v
+F/home/vhdlp21/git/hdl-lab/sources/testbench/memory.v
+L0 8
+R3
+R4
+!s100 IFBlCMWh;S5jCAK4h;IZO3
+!s105 memory_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/testbench/memory.v|
+!s108 1375951133.011507
+!s107 /home/vhdlp21/git/hdl-lab/sources/testbench/memory.v|
+!s85 0
+!i10b 1
+vregisters
+R1
+VXTCcl=N[7JVoz7THS]?^M1
+r1
+31
+IM]n;0OCl7SiO3[ZZ@4GD:1
+S1
+R2
+R5
+8/home/vhdlp21/git/hdl-lab/sources/rtl/registers.v
+F/home/vhdlp21/git/hdl-lab/sources/rtl/registers.v
+L0 1
+R3
+R4
+!s100 o0aUzC[HTRKIRZdgg;oHE0
+!s105 registers_v_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/rtl/registers.v|
+!s108 1375951132.940914
+!s107 /home/vhdlp21/git/hdl-lab/sources/rtl/registers.v|
+!s85 0
+!i10b 1
+vtestbench
+R1
+V`a9nlBcca[E=^c3644B^l2
+r1
+31
+IRQjl0LALGAPgR:`Q7Ze`Y1
+S1
+R2
+R6
+8/home/vhdlp21/git/hdl-lab/sources/testbench/testbench.v
+F/home/vhdlp21/git/hdl-lab/sources/testbench/testbench.v
+L0 8
+R3
+R4
+!s100 bId1=IP9?A;XV:d95fWVX1
+!s105 testbench_v_unit
+!s108 1375951133.043782
+!s107 /home/vhdlp21/git/hdl-lab/sources/testbench/testbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/vhdlp21/git/hdl-lab/sources/testbench/testbench.v|
+!s85 0
+!i10b 1

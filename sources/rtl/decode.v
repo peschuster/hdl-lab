@@ -98,8 +98,9 @@ always_ff @(posedge clk) begin
             o_alusel_r <= 3'b000;
           end
         9'b1101?????: begin // B
-            o_imm_r <= 32'h00000000;
-//TODO ????
+            o_imm_r <= { { 24 { i_ir[7] } }, i_ir[6:0], 1'b0 }; // SignExtend(i_ir[7:0]:'0')
+            o_addrrn_r <= 15; // PC register
+            o_alusel_r <= 3'b000;
           end
         9'b00101????: begin // CMP
             o_imm_r <= { { 24 { 1'b0 } }, i_ir[7:0]};
@@ -153,10 +154,10 @@ always_ff @(posedge clk) begin
       if (i_apsr[2] == 1 || i_apsr[3] != i_apsr[0]) 
         o_mode_r <= 2;
       else
-        o_mode_r <= 1;
+        o_mode_r <= 0;
     end
   else
-    o_mode_r <= 1;
+    o_mode_r <= 0;
 end
 
 endmodule
