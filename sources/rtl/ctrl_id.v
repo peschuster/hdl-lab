@@ -82,10 +82,10 @@ always_ff @(posedge clk) begin
     o_mem_data_access_r <= 0;
   else begin
     casez (i_ir[15:11])
-      9'b01101: begin // LDR
+      5'b01101: begin // LDR
         o_mem_data_access_r <= 2;
       end
-      9'b01100: begin // STR
+      5'b01100: begin // STR
         o_mem_data_access_r <= 2;
       end
       

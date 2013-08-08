@@ -58,6 +58,14 @@ always_comb begin
       branch_met = 0;
     end
   end
+  else if (ir_ex[15:11] == 5'b01101) begin // LDR
+    o_addr_mode = 3;  // 11: alu-addr (data memory)
+    branch_met = 0;
+  end
+  else if (ir_ex[15:11] == 5'b01100) begin // STR
+    o_addr_mode = 3;
+    branch_met = 0;
+  end
   else begin
     o_addr_mode = 0;
     branch_met = 0;
