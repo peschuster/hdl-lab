@@ -61,7 +61,7 @@ always@ (*) begin
     default:
     // error ??
     iresult_r = 0;
-    // if you are shure that there will be no disallowed commands
+    // if you are sure that there will be no disallowed commands
     // we can use the default path for sub and save one sub block.
   endcase
 
