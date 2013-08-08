@@ -1,0 +1,82 @@
+/home/vhdlp6/git/hdl-lab/sources/testbench/ir_cache_ctrl_tb.v {1 {vlog -work work -vopt -sv /home/vhdlp6/git/hdl-lab/sources/testbench/ir_cache_ctrl_tb.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ir_cache_ctrl_tb
+
+Top level modules:
+	ir_cache_ctrl_tb
+
+} {} {}} /home/vhdlp6/git/hdl-lab/sources/rtl/ir_cache_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp6/git/hdl-lab/sources/rtl/ir_cache_ctrl.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ir_cache_ctrl
+
+Top level modules:
+<<<<<<< HEAD
+	ir_cache_ctrl
+=======
+	addr_ctrl
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/mem_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/mem_ctrl.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module mem_ctrl
+
+Top level modules:
+	mem_ctrl
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module decode_tb
+
+Top level modules:
+	decode_tb
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module decode
+
+Top level modules:
+	decode
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/registers.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/registers.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module registers
+
+Top level modules:
+	registers
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/testbench.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/testbench.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module addr_ctrl_tb
+
+Top level modules:
+	addr_ctrl_tb
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/alu.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/alu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
+>>>>>>> 2dafd8f3ff80a91ad228f5acdec28355c28e4e42
+
+} {} {}}
