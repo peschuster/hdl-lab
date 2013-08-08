@@ -13,6 +13,7 @@ project open /home/vhdlp6/project/work/vsim/hdllab2013
 # Project file /home/vhdlp6/project/work/vsim/hdllab2013.mpf was not found.
 # Unable to open project.
 # Loading project modules
+<<<<<<< HEAD
 # Compile of ir_cache_ctrl.v was successful.
 # Compile of ir_cache_ctrl_tb.v was successful.
 # 2 compiles, 0 failed with no errors. 
@@ -69,4 +70,192 @@ restart
 # Loading work.ir_cache_ctrl_tb
 # Refreshing /home/vhdlp6/git/hdl-lab/work/vsim/work.ir_cache_ctrl
 # Loading work.ir_cache_ctrl
+=======
+# Compile of alu.v was successful.
+# Compile of alu_testbench.v was successful.
+# Compile of decode.v was successful.
+# Compile of decode_tb.v was successful.
+# Compile of addr_ctrl.v failed with 1 errors.
+# Compile of cpu.v was successful.
+# Compile of mem_ctrl.v was successful.
+# Compile of registers.v was successful.
+# Compile of addr_ctrl_tb.v was successful.
+# 9 compiles, 1 failed with 1 error. 
+# Compile of alu.v was successful.
+# Compile of alu_testbench.v was successful.
+# Compile of decode.v was successful.
+# Compile of decode_tb.v was successful.
+# Compile of addr_ctrl.v was successful.
+# Compile of cpu.v was successful.
+# Compile of mem_ctrl.v was successful.
+# Compile of registers.v was successful.
+# Compile of addr_ctrl_tb.v was successful.
+# 9 compiles, 0 failed with no errors. 
+do addr_ctrl.do
+# vsim -novopt work.addr_ctrl_tb 
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl_tb
+# Loading sv_std.std
+# Loading work.addr_ctrl_tb
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl
+# Loading work.addr_ctrl
+# ** Note: $finish    : /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v(50)
+#    Time: 38 ns  Iteration: 0  Instance: /addr_ctrl_tb
+# 1
+# Break in Module addr_ctrl_tb at /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v line 50
+# Simulation Breakpoint: 1
+# Break in Module addr_ctrl_tb at /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v line 50
+# MACRO ./addr_ctrl.do PAUSED at line 6
+# Compile of addr_ctrl.v was successful.
+do addr_ctrl.do
+# vsim -novopt work.addr_ctrl_tb 
+# Loading sv_std.std
+# Loading work.addr_ctrl_tb
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl
+# Loading work.addr_ctrl
+# ** Note: $finish    : /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v(50)
+#    Time: 38 ns  Iteration: 0  Instance: /addr_ctrl_tb
+# 1
+# Break in Module addr_ctrl_tb at /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v line 50
+# Simulation Breakpoint: 1
+# Break in Module addr_ctrl_tb at /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v line 50
+# MACRO ./addr_ctrl.do PAUSED at line 6
+# Compile of addr_ctrl_tb.v was successful.
+restart
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl_tb
+# Loading sv_std.std
+# Loading work.addr_ctrl_tb
+# Loading work.addr_ctrl
+run
+# ** Note: $finish    : /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v(53)
+#    Time: 52 ns  Iteration: 0  Instance: /addr_ctrl_tb
+# 1
+# Break in Module addr_ctrl_tb at /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v line 53
+# Compile of addr_ctrl_tb.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_testbench.v was successful.
+# Compile of decode.v was successful.
+# Compile of decode_tb.v was successful.
+# Compile of addr_ctrl.v was successful.
+# Compile of cpu.v was successful.
+# Compile of mem_ctrl.v was successful.
+# Compile of registers.v was successful.
+# Compile of addr_ctrl_tb.v was successful.
+# 9 compiles, 0 failed with no errors. 
+restart
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl_tb
+# Loading sv_std.std
+# Loading work.addr_ctrl_tb
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl
+# Loading work.addr_ctrl
+run
+# ** Note: $finish    : /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v(53)
+#    Time: 46 ns  Iteration: 0  Instance: /addr_ctrl_tb
+# 1
+# Break in Module addr_ctrl_tb at /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v line 53
+# Compile of alu.v was successful.
+# Compile of alu_testbench.v was successful.
+# Compile of decode.v was successful.
+# Compile of decode_tb.v was successful.
+# Compile of addr_ctrl.v was successful.
+# Compile of cpu.v was successful.
+# Compile of mem_ctrl.v was successful.
+# Compile of registers.v was successful.
+# Compile of addr_ctrl_tb.v was successful.
+# 9 compiles, 0 failed with no errors. 
+restart
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl_tb
+# Loading sv_std.std
+# Loading work.addr_ctrl_tb
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl
+# Loading work.addr_ctrl
+run
+# ** Note: $finish    : /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v(53)
+#    Time: 47200 ps  Iteration: 0  Instance: /addr_ctrl_tb
+# 1
+# Break in Module addr_ctrl_tb at /home/vhdlp21/git/hdl-lab/sources/testbench/addr_ctrl_tb.v line 53
+# Compile of alu.v was successful.
+# Compile of alu_testbench.v was successful.
+# Compile of decode.v was successful.
+# Compile of decode_tb.v was successful.
+# Compile of addr_ctrl.v was successful.
+# Compile of cpu.v was successful.
+# Compile of mem_ctrl.v was successful.
+# Compile of registers.v was successful.
+# Compile of addr_ctrl_tb.v was successful.
+# 9 compiles, 0 failed with no errors. 
+# Compile of alu.v was successful.
+# Compile of alu_testbench.v was successful.
+# Compile of decode.v was successful.
+# Compile of decode_tb.v was successful.
+# Compile of addr_ctrl.v was successful.
+# Compile of cpu.v was successful.
+# Compile of mem_ctrl.v was successful.
+# Compile of registers.v was successful.
+# Compile of addr_ctrl_tb.v was successful.
+# Compile of memory.v was successful.
+# Compile of testbench.v was successful.
+# 11 compiles, 0 failed with no errors. 
+do cpu_tb.do
+# vsim -novopt work.testbench 
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.testbench
+# Loading sv_std.std
+# Loading work.testbench
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.cpu
+# Loading work.cpu
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.decode
+# Loading work.decode
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl
+# Loading work.addr_ctrl
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.registers
+# Loading work.registers
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.alu
+# Loading work.alu
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.mem_ctrl
+# Loading work.mem_ctrl
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.memory
+# Loading work.memory
+# Compile of alu.v was successful.
+# Compile of alu_testbench.v was successful.
+# Compile of decode.v was successful.
+# Compile of decode_tb.v was successful.
+# Compile of addr_ctrl.v was successful.
+# Compile of cpu.v was successful.
+# Compile of mem_ctrl.v was successful.
+# Compile of registers.v was successful.
+# Compile of addr_ctrl_tb.v was successful.
+# Compile of memory.v was successful.
+# Compile of testbench.v was successful.
+# 11 compiles, 0 failed with no errors. 
+restart
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.testbench
+# Loading sv_std.std
+# Loading work.testbench
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.cpu
+# Loading work.cpu
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.decode
+# Loading work.decode
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.addr_ctrl
+# Loading work.addr_ctrl
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.registers
+# Loading work.registers
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.alu
+# Loading work.alu
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.mem_ctrl
+# Loading work.mem_ctrl
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.memory
+# Loading work.memory
+run
+# Compile of decode.v was successful.
+restart
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.cpu
+# Refreshing /home/vhdlp21/git/hdl-lab/work/vsim/work.decode
+# Loading work.decode
+# Loading work.addr_ctrl
+# Loading work.registers
+# Loading work.alu
+# Loading work.mem_ctrl
+# Loading work.memory
+>>>>>>> c0a9fdf3601b3dbcca27ecf0f6077954f95f5bc2
 run
