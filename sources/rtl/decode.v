@@ -20,11 +20,10 @@ module decode(
   o_imm_r
 );
 
-input logic   clk, rst, i_stall;
-input logic [15:0]  i_ir;
+input  logic   clk, rst, i_stall;
+input  logic [15:0]  i_ir;
 
-output logic [3:0]  o_addrrn_r;
-output logic [3:0]  o_addrrt_r;
+output logic [ 3:0]  o_addrrn_r, o_addrrt_r;
 output logic [31:0] o_imm_r;
 
 always_comb begin
@@ -55,7 +54,10 @@ always_comb begin
             o_addrrn_r <= i_ir[5:3];
             o_addrrt_r <= i_ir[2:0];
           end
-        9'b1101?????: begin // B
+        9'b11100????: begin // B
+            o_addrrn_r <= 15; // PC register
+          end
+        9'b1101?????: begin // B<c>
             o_addrrn_r <= 15; // PC register
           end
         9'b00101????: begin // CMP
@@ -94,7 +96,10 @@ always_ff @(posedge clk) begin
         9'b01100????: begin // STR
             o_imm_r <= i_ir[10:6];
           end
-        9'b1101?????: begin // B
+        9'b11100????: begin // B
+            o_imm_r <= { { 21 { i_ir[10] } }, i_ir[9:0], 1'b0 }; // SignExtend(i_ir[10:0]:'0')
+          end
+        9'b1101?????: begin // B<c>
             o_imm_r <= { { 24 { i_ir[7] } }, i_ir[6:0], 1'b0 }; // SignExtend(i_ir[7:0]:'0')
           end
         9'b00101????: begin // CMP

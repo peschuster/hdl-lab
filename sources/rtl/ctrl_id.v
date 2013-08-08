@@ -60,7 +60,10 @@ always_ff @(posedge clk) begin
         9'b01100????: begin // STR
             o_alu_sel_r <= ALU_ADD;
           end
-        9'b1101?????: begin // B
+        9'b11100????: begin // B
+            o_alu_sel_r <= ALU_ADD;
+          end
+        9'b1101?????: begin // B<c>
             o_alu_sel_r <= ALU_ADD;
           end
         9'b00101????: begin // CMP

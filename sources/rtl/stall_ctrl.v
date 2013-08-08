@@ -2,6 +2,7 @@ module stall_ctrl (
   clk,
   rst,
 
+  i_branch_met,
   i_mem_data_access, // Number of mem-data access cycles, set during ID phase
 
   o_stall_id_r,
@@ -10,7 +11,7 @@ module stall_ctrl (
   o_stall_wb_r
 );
 
-input  logic          clk, rst;
+input  logic          clk, rst, i_branch_met;
 input  logic  [ 3:0]  i_mem_data_access;
 
 output logic          o_stall_id_r, o_stall_ex_r, o_stall_mem_r, o_stall_wb_r;
@@ -21,7 +22,7 @@ logic [3:0] stall_counter;
 assign stall = stall_counter == 0 ? 0 : 1;
 
 always_ff @(posedge clk) begin
-  if (rst) begin
+  if (rst || i_branch_met) begin
     o_stall_id_r <= 0;
     o_stall_ex_r <= 0;
     o_stall_mem_r <= 0;
@@ -36,7 +37,7 @@ always_ff @(posedge clk) begin
 end
 
 always_ff @(posedge clk) begin
-  if (rst) begin
+  if (rst || i_branch_met) begin  // branch condition met -> pipeline aborted, don't stall
     stall_counter <= 0;
   end
   else if (i_mem_data_access != 0) begin

@@ -41,19 +41,23 @@ assign o_stall_wb  = stall_wb;
 // Mode ctrl
 always_comb begin
   if (rst) begin
+    o_addr_mode = 0;
+    branch_met = 0;
+  end
+  else if (ir_ex[15:11] == 5'b11100) begin
+    o_addr_mode = 1;  // 01: alu-addr (IR)
+    branch_met = 1;
+  end
+  else if (ir_ex[15:12] == 4'b1101) begin
+    if (i_apsr[2] == 1 || i_apsr[3] != i_apsr[0]) begin
+      o_addr_mode = 1;  // 01: alu-addr (IR)
+      branch_met = 1;
+    end
+    else begin
       o_addr_mode = 0;
       branch_met = 0;
     end
-  else if (ir_ex[15:12] == 4'b1101) begin
-      if (i_apsr[2] == 1 || i_apsr[3] != i_apsr[0]) begin
-        o_addr_mode = 1;  // 01: alu-addr (IR)
-        branch_met = 1;
-      end
-      else begin
-        o_addr_mode = 0;
-        branch_met = 0;
-      end
-    end
+  end
   else begin
     o_addr_mode = 0;
     branch_met = 0;
@@ -64,6 +68,7 @@ end
 stall_ctrl stall_ctrl_inst (
   .clk (clk),
   .rst (rst),
+  .i_branch_met (branch_met),
   .i_mem_data_access (mem_data_access), // Number of mem-data access cycles, set during ID phase
   .o_stall_id_r (stall_id),
   .o_stall_ex_r (stall_ex),
