@@ -28,7 +28,8 @@ output logic        o_mem_rd_en;
 output logic [0:1]  o_mem_wr_en;
 
 
-logic        rd_wr_en, stall;
+logic        rd_wr_en, stall_id, stall_ex, stall_mem, stall_wb;
+
 logic [ 3:0] apsr_r;
 logic [ 1:0] addr_mode; // 00: normal (+2), 01: alu-addr (ir memory), 10: mem-addr (pop), 11: alu-addr (data memory)
 logic [ 3:0] addr_rn_r, addr_rd_r, addr_rt_r;
@@ -63,12 +64,18 @@ control control_inst(
   .clk (clk),
   .rst (rst),
   
+  .i_apsr(apsr_r),
   .i_ir_id (ir_id),
+  
+  .o_stall_id (stall_id),
+  .o_stall_ex (stall_ex),
+  .o_stall_mem (stall_mem),
+  .o_stall_wb (stall_wb),
 
-  .o_stall (stall),  
   .o_alu_sel (alu_sel),
   .o_addr_rd_r (addr_rd_r),
-  .o_registers_rd_en_r (rd_wr_en)
+  .o_registers_rd_en_r (rd_wr_en),
+  .o_addr_mode (addr_mode)
 );
 
 //
@@ -115,7 +122,7 @@ mem_ctrl #(.MEM_DEPTH(MEM_DEPTH)) mem_ctrl_inst(
 ir_cache_ctrl ir_cache_ctrl_inst (
   .clk(clk),
   .rst(rst),
-  .stall(stall),
+  .stall(stall_id),
 
   .i_data(mem_do[15:0]),
   .o_data(ir_id)
@@ -128,19 +135,19 @@ decode decode_inst (
 
   // inputs  
   .i_ir(ir_id),
-  .i_apsr(apsr_r),
+  .i_stall(stall_ex),
   
   // outputs
   .o_addrrn_r(addr_rn_r),
   .o_addrrt_r(addr_rt_r),
-  .o_imm_r(imm_r),
-  .o_mode_r(addr_mode)
+  .o_imm_r(imm_r)
 );
 
 // Register file
 registers registers_inst (
   .clk (clk), 
   .rst (rst), 
+  .i_stall(stall_ex),
   .i_rd_wr_en (rd_wr_en),
 
   .i_addr_rn (addr_rn_r), 

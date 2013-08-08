@@ -6,20 +6,22 @@ module ctrl_id(
   i_ir,
 
   o_ir_ex_r,
-  o_alu_sel_r
+  o_alu_sel_r,
+  o_mem_data_access_r
 );
 
 localparam [2:0]
-  ALU_ADD     = 1'b000,
-  ALU_SUB     = 1'b101,
-  ALU_MV_IMM  = 1'b001,
-  ALU_MV_REG  = 1'b010;
+  ALU_ADD     = 3'b000,
+  ALU_SUB     = 3'b101,
+  ALU_MV_IMM  = 3'b001,
+  ALU_MV_REG  = 3'b010;
 
 input   logic       clk, rst, i_stall;
 input   logic[15:0] i_ir;
 
-output  logic[15:0] o_ir_ex_r;
-output  logic[2:0]  o_alu_sel_r;
+output  logic[15:0]  o_ir_ex_r;
+output  logic[ 2:0]  o_alu_sel_r;
+output  logic[ 3:0]  o_mem_data_access_r;
 
 // Buffer ir
 always_ff @(posedge clk) begin
@@ -69,6 +71,26 @@ always_ff @(posedge clk) begin
           end
       endcase;
     end
+end
+
+//Stall-control-logic
+always_ff @(posedge clk) begin
+  if(rst)
+    o_mem_data_access_r <= 0;
+  else begin
+    casez (i_ir[15:11])
+      9'b01101: begin // LDR
+        o_mem_data_access_r <= 2;
+      end
+      9'b01100: begin // STR
+        o_mem_data_access_r <= 2;
+      end
+      
+      default: begin
+        o_mem_data_access_r <= 0;
+      end
+    endcase
+  end
 end
 
 endmodule

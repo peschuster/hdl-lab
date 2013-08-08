@@ -6,6 +6,7 @@ module registers(
   i_addr_rd,
   i_addr_rt,
 
+  i_stall,
   i_rd,
   i_rd_wr_en,
 
@@ -21,7 +22,7 @@ localparam [3:0]
   LR = 14,
   PC = 15;
 
-input  logic     clk, rst, i_rd_wr_en;
+input  logic     clk, rst, i_rd_wr_en, i_stall;
 
 input  logic [ 3:0]  i_addr_rn, i_addr_rd, i_addr_rt;
 input  logic [31:0]  i_rd, i_pc;
@@ -45,8 +46,10 @@ always_ff @(posedge clk) begin
   else begin
     regs_r[PC] <= i_pc;
 
-    o_rn_r <= i_addr_rn == PC ? i_pc : regs_r[i_addr_rn];
-    o_rt_r <= i_addr_rt == PC ? i_pc : regs_r[i_addr_rt];
+    if (i_stall == 0) begin
+      o_rn_r <= i_addr_rn == PC ? i_pc : regs_r[i_addr_rn];
+      o_rt_r <= i_addr_rt == PC ? i_pc : regs_r[i_addr_rt];
+    end
     
     if (i_rd_wr_en) begin
       regs_r[i_addr_rd] <= i_rd;
