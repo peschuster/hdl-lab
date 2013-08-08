@@ -42,33 +42,15 @@ assign o_stall_wb  = stall_wb;
 always_comb begin
   if (rst) begin
     o_addr_mode = 0;
-    branch_met = 0;
-  end
-  else if (ir_ex[15:11] == 5'b11100) begin
-    o_addr_mode = 1;  // 01: alu-addr (IR)
-    branch_met = 1;
-  end
-  else if (ir_ex[15:12] == 4'b1101) begin
-    if (i_apsr[2] == 1 || i_apsr[3] != i_apsr[0]) begin
-      o_addr_mode = 1;  // 01: alu-addr (IR)
-      branch_met = 1;
-    end
-    else begin
-      o_addr_mode = 0;
-      branch_met = 0;
-    end
   end
   else if (ir_ex[15:11] == 5'b01101) begin // LDR
     o_addr_mode = 3;  // 11: alu-addr (data memory)
-    branch_met = 0;
   end
   else if (ir_ex[15:11] == 5'b01100) begin // STR
     o_addr_mode = 3;
-    branch_met = 0;
   end
   else begin
     o_addr_mode = 0;
-    branch_met = 0;
   end
 end
 // temp end
@@ -105,8 +87,10 @@ ctrl_ex ctrl_ex_inst(
   
   .i_stall (o_stall_ex),
   .i_ir (ir_ex),
+  .i_apsr (i_apsr)
   
-  .o_ir_mem (ir_2mem)
+  .o_ir_mem (ir_2mem),
+  .o_branch_met(branch_met)
 );
 
 
