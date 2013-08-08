@@ -1,0 +1,106 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cpu
+Version: E-2010.12-SP1
+Date   : Thu Aug  8 23:52:02 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65lptc
+Wire Load Model Mode: segmented
+
+  Startpoint: registers_inst/o_rn_r_reg[0]
+              (rising edge-triggered flip-flop clocked by CLOCK)
+  Endpoint: apsr_r_reg[2]
+            (rising edge-triggered flip-flop clocked by CLOCK)
+  Path Group: CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ctrl_mem           ZeroWireload          tcbn65lptc
+  ctrl_ex            ZeroWireload          tcbn65lptc
+  ctrl_id            ZeroWireload          tcbn65lptc
+  stall_ctrl         ZeroWireload          tcbn65lptc
+  registers          ZeroWireload          tcbn65lptc
+  decode             ZeroWireload          tcbn65lptc
+  ir_cache_ctrl      ZeroWireload          tcbn65lptc
+  mem_ctrl_MEM_DEPTH4096
+                     ZeroWireload          tcbn65lptc
+  cpu                ZeroWireload          tcbn65lptc
+  control            ZeroWireload          tcbn65lptc
+  alu_DW01_sub_3     ZeroWireload          tcbn65lptc
+  alu_DW01_add_3     ZeroWireload          tcbn65lptc
+  alu                ZeroWireload          tcbn65lptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLOCK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  registers_inst/o_rn_r_reg[0]/CP (DFD4)                  0.00       0.00 r
+  registers_inst/o_rn_r_reg[0]/Q (DFD4)                   0.13       0.13 f
+  registers_inst/o_rn_r[0] (registers)                    0.00       0.13 f
+  alu_inst/i_rn[0] (alu)                                  0.00       0.13 f
+  alu_inst/add_47/B[0] (alu_DW01_add_3)                   0.00       0.13 f
+  alu_inst/add_47/U8/ZN (CKND4)                           0.02       0.14 r
+  alu_inst/add_47/U7/ZN (NR2D4)                           0.02       0.16 f
+  alu_inst/add_47/U3/ZN (ND2D4)                           0.01       0.17 r
+  alu_inst/add_47/U5/ZN (ND3D2)                           0.03       0.21 f
+  alu_inst/add_47/U1_2/CO (FA1D1)                         0.06       0.27 f
+  alu_inst/add_47/U1_3/CO (FA1D1)                         0.06       0.34 f
+  alu_inst/add_47/U1_4/CO (FA1D1)                         0.06       0.40 f
+  alu_inst/add_47/U1_5/CO (FA1D1)                         0.06       0.46 f
+  alu_inst/add_47/U1_6/CO (FA1D1)                         0.06       0.53 f
+  alu_inst/add_47/U1_7/CO (FA1D1)                         0.06       0.59 f
+  alu_inst/add_47/U1_8/CO (FA1D1)                         0.06       0.66 f
+  alu_inst/add_47/U1_9/CO (FA1D1)                         0.06       0.72 f
+  alu_inst/add_47/U1_10/CO (FA1D1)                        0.06       0.78 f
+  alu_inst/add_47/U1_11/CO (FA1D1)                        0.06       0.85 f
+  alu_inst/add_47/U1_12/CO (FA1D1)                        0.06       0.91 f
+  alu_inst/add_47/U1_13/CO (FA1D1)                        0.06       0.97 f
+  alu_inst/add_47/U1_14/CO (FA1D1)                        0.06       1.04 f
+  alu_inst/add_47/U1_15/CO (FA1D1)                        0.06       1.10 f
+  alu_inst/add_47/U1_16/CO (FA1D1)                        0.06       1.17 f
+  alu_inst/add_47/U1_17/CO (FA1D1)                        0.06       1.23 f
+  alu_inst/add_47/U1_18/CO (FA1D1)                        0.06       1.29 f
+  alu_inst/add_47/U1_19/CO (FA1D1)                        0.06       1.36 f
+  alu_inst/add_47/U1_20/CO (FA1D1)                        0.06       1.42 f
+  alu_inst/add_47/U1_21/CO (FA1D1)                        0.06       1.48 f
+  alu_inst/add_47/U1_22/CO (FA1D1)                        0.06       1.55 f
+  alu_inst/add_47/U1_23/CO (FA1D1)                        0.06       1.61 f
+  alu_inst/add_47/U1_24/CO (FA1D1)                        0.06       1.68 f
+  alu_inst/add_47/U1_25/CO (FA1D1)                        0.06       1.74 f
+  alu_inst/add_47/U1_26/CO (FA1D1)                        0.06       1.80 f
+  alu_inst/add_47/U1_27/CO (FA1D1)                        0.06       1.87 f
+  alu_inst/add_47/U1_28/CO (FA1D1)                        0.06       1.93 f
+  alu_inst/add_47/U1_29/CO (FA1D1)                        0.06       1.99 f
+  alu_inst/add_47/U1_30/CO (FA1D1)                        0.06       2.05 f
+  alu_inst/add_47/U1_31/Z (XOR3D1)                        0.07       2.12 f
+  alu_inst/add_47/SUM[31] (alu_DW01_add_3)                0.00       2.12 f
+  alu_inst/U67/ZN (CKND2)                                 0.03       2.15 r
+  alu_inst/U65/ZN (OAI221XD4)                             0.05       2.19 f
+  alu_inst/U71/ZN (INR4D2)                                0.04       2.23 r
+  alu_inst/U106/ZN (CKND2D2)                              0.02       2.25 f
+  alu_inst/U112/ZN (NR2XD1)                               0.02       2.28 r
+  alu_inst/o_apsr_r[2] (alu)                              0.00       2.28 r
+  U48/ZN (CKND2D2)                                        0.02       2.30 f
+  U49/ZN (CKND2)                                          0.01       2.31 r
+  apsr_r_reg[2]/D (DFD2)                                  0.00       2.31 r
+  data arrival time                                                  2.31
+
+  clock CLOCK (rise edge)                                 1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  apsr_r_reg[2]/CP (DFD2)                                 0.00       1.00 r
+  library setup time                                     -0.02       0.98
+  data required time                                                 0.98
+  --------------------------------------------------------------------------
+  data required time                                                 0.98
+  data arrival time                                                 -2.31
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.33
+
+
+1

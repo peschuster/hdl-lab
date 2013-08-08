@@ -1,0 +1,62 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : cpu
+Version: E-2010.12-SP1
+Date   : Thu Aug  8 23:52:02 2013
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lptc (File: /cad/synopsys/libs/Faraday_UMC_65nm/Standard_Cell/tcbn65lp_200c_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_200a/tcbn65lptc.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn65lptc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+cpu                    ZeroWireload      tcbn65lptc
+control                ZeroWireload      tcbn65lptc
+addr_ctrl_MEM_DEPTH4096
+                       ZeroWireload      tcbn65lptc
+mem_ctrl_MEM_DEPTH4096 ZeroWireload      tcbn65lptc
+ir_cache_ctrl          ZeroWireload      tcbn65lptc
+decode                 ZeroWireload      tcbn65lptc
+registers              ZeroWireload      tcbn65lptc
+alu                    ZeroWireload      tcbn65lptc
+stall_ctrl             ZeroWireload      tcbn65lptc
+ctrl_id                ZeroWireload      tcbn65lptc
+ctrl_ex                ZeroWireload      tcbn65lptc
+ctrl_mem               ZeroWireload      tcbn65lptc
+conditions             ZeroWireload      tcbn65lptc
+alu_DW01_sub_3         ZeroWireload      tcbn65lptc
+alu_DW01_add_3         ZeroWireload      tcbn65lptc
+mem_ctrl_MEM_DEPTH4096_DW01_add_3
+                       ZeroWireload      tcbn65lptc
+addr_ctrl_MEM_DEPTH4096_DW01_add_3
+                       ZeroWireload      tcbn65lptc
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   7.6770 mW   (97%)
+  Net Switching Power  = 213.8875 uW    (3%)
+                         ---------
+Total Dynamic Power    =   7.8909 mW  (100%)
+
+Cell Leakage Power     = 572.3805 nW
+
+1

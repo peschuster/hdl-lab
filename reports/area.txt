@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : area
+Design : cpu
+Version: E-2010.12-SP1
+Date   : Thu Aug  8 23:52:02 2013
+****************************************
+
+Library(s) Used:
+
+    tcbn65lptc (File: /cad/synopsys/libs/Faraday_UMC_65nm/Standard_Cell/tcbn65lp_200c_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_200a/tcbn65lptc.db)
+
+Number of ports:                           51
+Number of nets:                           400
+Number of cells:                           82
+Number of combinational cells:             41
+Number of sequential cells:                34
+Number of macros:                           0
+Number of buf/inv:                          5
+Number of references:                      20
+
+Combinational area:       7011.720055
+Noncombinational area:    5681.520075
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          12693.240130
+Total area:                 undefined
+1

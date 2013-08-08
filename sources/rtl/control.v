@@ -87,7 +87,7 @@ ctrl_ex ctrl_ex_inst(
   
   .i_stall (o_stall_ex),
   .i_ir (ir_ex),
-  .i_apsr (i_apsr)
+  .i_apsr (i_apsr),
   
   .o_ir_mem (ir_2mem),
   .o_branch_met(branch_met)

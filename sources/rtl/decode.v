@@ -27,47 +27,48 @@ output logic [ 3:0]  o_addrrn_r, o_addrrt_r;
 output logic [31:0] o_imm_r;
 
 always_comb begin
-
-  if (rst) begin
-      o_addrrn_r <= 0;
-      o_addrrt_r <= 0;
-    end
-  else
-    begin
-
-      casez (i_ir[15:7])
-        9'b0001110??: begin // ADD
-            o_addrrn_r <= i_ir[5:3];
-          end
-        9'b101100001: begin // SUB SP
-            o_addrrn_r <= 13; // 13=SP
-          end
-        9'b00100????: begin // MOV IMM
-          end
-        9'b01000110?: begin // MOV REG
-            o_addrrn_r <= i_ir[6:3];
-          end
-        9'b01101????: begin // LDR
-            o_addrrn_r <= i_ir[5:3];
-          end
-        9'b01100????: begin // STR
-            o_addrrn_r <= i_ir[5:3];
-            o_addrrt_r <= i_ir[2:0];
-          end
-        9'b11100????: begin // B
-            o_addrrn_r <= 15; // PC register
-          end
-        9'b1101?????: begin // B<c>
-            o_addrrn_r <= 15; // PC register
-          end
-        9'b00101????: begin // CMP
-            o_addrrn_r <= i_ir[10:8];
-          end
-        default:     begin // error
-            o_addrrn_r <= 0;
-          end
-      endcase;
-    end
+  casez (i_ir[15:7])
+    9'b0001110??: begin // ADD
+        o_addrrn_r = i_ir[5:3];
+        o_addrrt_r = 0;
+      end
+    9'b101100001: begin // SUB SP
+        o_addrrn_r = 13; // 13=SP
+        o_addrrt_r = 0;
+      end
+    9'b00100????: begin // MOV IMM
+        o_addrrn_r = 0;
+        o_addrrt_r = 0;
+      end
+    9'b01000110?: begin // MOV REG
+        o_addrrn_r = i_ir[6:3];
+        o_addrrt_r = 0;
+      end
+    9'b01101????: begin // LDR
+        o_addrrn_r = i_ir[5:3];
+        o_addrrt_r = 0;
+      end
+    9'b01100????: begin // STR
+        o_addrrn_r = i_ir[5:3];
+        o_addrrt_r = i_ir[2:0];
+      end
+    9'b11100????: begin // B
+        o_addrrn_r = 15; // PC register
+        o_addrrt_r = 0;
+      end
+    9'b1101?????: begin // B<c>
+        o_addrrn_r = 15; // PC register
+        o_addrrt_r = 0;
+      end
+    9'b00101????: begin // CMP
+        o_addrrn_r = i_ir[10:8];
+        o_addrrt_r = 0;
+      end
+    default:     begin // error
+        o_addrrn_r = 0;
+        o_addrrt_r = 0;
+      end
+  endcase
 end
 
 always_ff @(posedge clk) begin

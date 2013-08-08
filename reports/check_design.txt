@@ -1,0 +1,130 @@
+ 
+****************************************
+check_design summary:
+Version:     E-2010.12-SP1
+Date:        Thu Aug  8 23:52:02 2013
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     98
+    Unconnected ports (LINT-28)                                    85
+    Feedthrough (LINT-29)                                           2
+    Shorted outputs (LINT-31)                                       5
+    Constant outputs (LINT-52)                                      6
+
+Cells                                                               6
+    Net is fed into multiple inputs (LINT-33)                       6
+--------------------------------------------------------------------------------
+
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_alu_addr[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', port 'i_mem_addr[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'ctrl_ex', port 'i_stall' is not connected to any nets. (LINT-28)
+Warning: In design 'conditions', port 'i_ir[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'conditions', port 'i_ir[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'conditions', port 'i_ir[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'conditions', port 'i_ir[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'conditions', port 'i_ir[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'conditions', port 'i_ir[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'conditions', port 'i_ir[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'conditions', port 'i_ir[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_3', port 'A[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_3', port 'B[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'A[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096_DW01_add_3', input port 'A[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'addr_ctrl_MEM_DEPTH4096_DW01_add_3', input port 'A[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'control', output port 'o_addr_mode[1]' is connected directly to output port 'o_addr_mode[0]'. (LINT-31)
+Warning: In design 'mem_ctrl_MEM_DEPTH4096', output port 'o_en' is connected directly to output port 'o_rd_en'. (LINT-31)
+Warning: In design 'alu', output port 'o_apsr_r[1]' is connected directly to output port 'o_apsr_r[0]'. (LINT-31)
+Warning: In design 'ctrl_id', output port 'o_mem_data_access_r[3]' is connected directly to output port 'o_mem_data_access_r[2]'. (LINT-31)
+Warning: In design 'ctrl_id', output port 'o_mem_data_access_r[3]' is connected directly to output port 'o_mem_data_access_r[0]'. (LINT-31)
+Warning: In design 'cpu', the same net is connected to more than one pin on submodule 'control_inst'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'i_apsr[1]', 'i_apsr[0]''.
+Warning: In design 'cpu', the same net is connected to more than one pin on submodule 'mem_ctrl_inst'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'i_wr_mode[1]', 'i_wr_mode[0]'', 'i_rd_mode[1]'.
+Warning: In design 'control', the same net is connected to more than one pin on submodule 'stall_ctrl_inst'. (LINT-33)
+   Net 'n2' is connected to pins 'i_mem_data_access[3]', 'i_mem_data_access[2]'', 'i_mem_data_access[0]'.
+Warning: In design 'addr_ctrl_MEM_DEPTH4096', the same net is connected to more than one pin on submodule 'add_57'. (LINT-33)
+   Net 'n3' is connected to pins 'A[13]', 'B[13]'', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[0]', 'CI'.
+Warning: In design 'mem_ctrl_MEM_DEPTH4096', the same net is connected to more than one pin on submodule 'add_98'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[12]', 'B[11]'', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[0]', 'CI'.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'sub_50'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[32]', 'B[32]'', 'CI'.
+Warning: In design 'decode', output port 'o_addrrt_r[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'alu', output port 'o_apsr_r[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'alu', output port 'o_apsr_r[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ctrl_id', output port 'o_mem_data_access_r[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ctrl_id', output port 'o_mem_data_access_r[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ctrl_id', output port 'o_mem_data_access_r[0]' is connected directly to 'logic 0'. (LINT-52)
+1

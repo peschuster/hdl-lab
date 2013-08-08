@@ -1,0 +1,44 @@
+ 
+****************************************
+Report : reference
+Design : cpu
+Version: E-2010.12-SP1
+Date   : Thu Aug  8 23:52:02 2013
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AN2XD1             tcbn65lptc     2.160000       3      6.480000  
+CKND1              tcbn65lptc     1.080000       1      1.080000  
+CKND2              tcbn65lptc     1.440000       1      1.440000  
+CKND2D1            tcbn65lptc     1.440000       1      1.440000  
+CKND2D2            tcbn65lptc     2.520000       1      2.520000  
+DFD2               tcbn65lptc     8.280000       1      8.280000  n
+DFQD1              tcbn65lptc     6.840000      33    225.720005  n
+INR2D0             tcbn65lptc     2.160000      28     60.480002  
+INR2XD4            tcbn65lptc     9.360000       1      9.360000  
+INVD1              tcbn65lptc     1.080000       2      2.160000  
+INVD12             tcbn65lptc     6.120000       1      6.120000  
+TIEH               tcbn65lptc     1.080000       1      1.080000  
+TIEL               tcbn65lptc     1.080000       1      1.080000  
+addr_ctrl_MEM_DEPTH4096         233.280005       1    233.280005  h
+alu                            1020.960000       1   1020.960000  h
+control                         793.079999       1    793.079999  h, n
+decode                          492.480005       1    492.480005  h, n
+ir_cache_ctrl                   300.959999       1    300.959999  h, n
+mem_ctrl_MEM_DEPTH4096          749.519993       1    749.519993  h, n
+registers                      8775.720122       1   8775.720122  h, n
+-----------------------------------------------------------------------------
+Total 20 references                                 12693.240130
+1

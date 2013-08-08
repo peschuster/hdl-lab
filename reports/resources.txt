@@ -1,0 +1,15 @@
+ 
+****************************************
+Report : resources
+Design : cpu
+Version: E-2010.12-SP1
+Date   : Thu Aug  8 23:52:02 2013
+****************************************
+
+
+No resource sharing information to report.
+
+No implementations to report
+
+No multiplexors to report
+1
