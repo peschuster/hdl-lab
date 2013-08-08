@@ -1,6 +1,13 @@
+// Integrated Electronic Systems Lab
+// TU Darmstadt
+// Author:	Group 6
+// Email:
+//
+// Testbench for ALU module.
 
+`timescale 1 ns / 1 ps
 
-module testbench();
+module alu_tb();
 
 // PARAMETERS
 
@@ -16,8 +23,8 @@ alu alu_i(
 	.i_imm(imm),
 	.i_rn(rn),
 	.i_sel(sel),
-	.o_result_r(result),
-	.o_apsr_r(apsr)
+	.o_result(result),
+	.o_apsr(apsr)
 );
 
 //memory ...

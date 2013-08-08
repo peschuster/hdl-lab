@@ -8,8 +8,8 @@
 module testbench();
 
 // PARAMETERS
-parameter MEM_DEPTH   		= 2**13;	//8192 Bytes
-parameter ADDR_WIDTH   		= $clog2(MEM_DEPTH);
+parameter MEM_DEPTH   		= 2**12;	//8192 Bytes
+parameter ADDR_WIDTH   		= $clog2(MEM_DEPTH*2);
 parameter string filename	= "../../sources/software/count32.bin";
 
 // INTERNAL SIGNALS
@@ -23,18 +23,22 @@ logic [15:0]	data_cpu2mem;
 logic [15:0]	data_mem2cpu;
 logic [ADDR_WIDTH-1:0] addr;
 
-assign en		= 1'b1;
-assign rd_en	= 1'b1;
-assign wr_en	= 2'b0;
 
 // CPU INSTANTIATION
-//cpu  
-//cpu_i (
-//    .clk 	(clk),
-//    .rst 	(rst),
-//    .addr	(addr)
-	// add more signals here
-//);
+cpu  #(
+	.MEM_DEPTH (MEM_DEPTH)) 
+cpu_inst (
+  .clk (clk),
+  .rst (rst),
+
+  .i_mem_do (data_mem2cpu),
+  
+  .o_mem_di (data_cpu2mem),
+  .o_mem_addr (addr),
+  .o_mem_en (en),
+  .o_mem_rd_en (rd_en),
+  .o_mem_wr_en (wr_en)
+);
 
 // MODULE INSTANTIATION
 memory #(
@@ -46,7 +50,8 @@ memory_i (
     .rd_en  (rd_en),
     .wr_en  (wr_en),
     .din (data_cpu2mem),
-    .dout(data_mem2cpu));
+    .dout(data_mem2cpu)
+);
   
 //CLOCK GENERATOR
 initial begin
@@ -61,7 +66,7 @@ initial begin
 	#3 rst		= 1'b1;     // 3   ns
 	status		= $fread(memory_i.ram, file);
 	#2.1 rst	= 1'b0;  //2.1 ns
-	$finish;
+	// $finish;
 end
 
-endmodule;
+endmodule

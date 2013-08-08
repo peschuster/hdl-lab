@@ -3,7 +3,7 @@ module pc_ctrl (
   i_pc,
   i_branch,
 
-  o_pc,
+  o_pc
 );
 
 input logic [ 1:0] i_mode; // 00: stall, 01: normal (+2), 10: branch
