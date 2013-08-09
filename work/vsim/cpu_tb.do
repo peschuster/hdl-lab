@@ -17,6 +17,12 @@ add wave /testbench/cpu_inst/apsr_alu
 add wave /testbench/cpu_inst/alu_sel
 add wave /testbench/cpu_inst/apsr_r
 
+add wave -expand -group {ir pipeline} -radix hexadecimal /testbench/cpu_inst/mem_do
+add wave -expand -group {ir pipeline} -radix hexadecimal /testbench/cpu_inst/ir_id
+add wave -expand -group {ir pipeline} -radix hexadecimal /testbench/cpu_inst/control_inst/ir_ex
+add wave -expand -group {ir pipeline} -radix hexadecimal /testbench/cpu_inst/control_inst/ir_2mem
+add wave -expand -group {ir pipeline} -radix hexadecimal /testbench/cpu_inst/control_inst/ir_2wb
+
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left

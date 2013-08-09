@@ -47,19 +47,19 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	mem_ctrl
 
-} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/stall_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/stall_ctrl.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module stall_ctrl
-
-Top level modules:
-	stall_ctrl
-
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/decode.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module decode
 
 Top level modules:
 	decode
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/stall_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/stall_ctrl.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module stall_ctrl
+
+Top level modules:
+	stall_ctrl
 
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_wb.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_wb.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
@@ -75,19 +75,12 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	ir_cache_ctrl_tb
 
-} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/memory.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/memory.v
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module memory
+-- Compiling module testbench
 
 Top level modules:
-	memory
-
-} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module decode_tb
-
-Top level modules:
-	decode_tb
+	testbench
 
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/addr_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/addr_ctrl.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
@@ -96,12 +89,26 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	addr_ctrl
 
-} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/alu_testbench.v
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/decode_tb.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module testbench
+-- Compiling module decode_tb
 
 Top level modules:
-	testbench
+	decode_tb
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/testbench/memory.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/testbench/memory.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module cpu
+
+Top level modules:
+	cpu
 
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/registers.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/registers.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
@@ -110,12 +117,12 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	registers
 
-} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_ex.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_ex.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module cpu
+-- Compiling module ctrl_ex
 
 Top level modules:
-	cpu
+	ctrl_ex
 
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_id.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/ctrl_id.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012

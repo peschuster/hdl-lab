@@ -37,23 +37,17 @@ assign o_stall_mem = stall_mem;
 assign o_stall_wb  = stall_wb;
 
 // temp
-
-// Mode ctrl
-always_comb begin
-  if (rst) begin
-    o_addr_mode = 0;
-  end
-  else if (ir_ex[15:11] == 5'b01101) begin // LDR
-    o_addr_mode = 3;  // 11: alu-addr (data memory)
-  end
-  else if (ir_ex[15:11] == 5'b01100) begin // STR
-    o_addr_mode = 3;
-  end
-  else begin
-    o_addr_mode = 0;
-  end
-end
 // temp end
+
+addr_switch addr_switch_inst (
+  .clk (clk),
+  .rst (rst),
+
+  .i_branch_met (branch_met),
+  .i_ir_ex (ir_ex),
+
+  .o_addr_mode (o_addr_mode)
+);
 
 stall_ctrl stall_ctrl_inst (
   .clk (clk),
