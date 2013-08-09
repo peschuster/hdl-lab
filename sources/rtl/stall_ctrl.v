@@ -22,7 +22,7 @@ logic [3:0] stall_counter;
 assign stall = stall_counter == 0 ? 0 : 1;
 
 always_ff @(posedge clk) begin
-  if (rst || i_branch_met) begin
+  if (rst) begin // || i_branch_met
     o_stall_id_r <= 0;
     o_stall_ex_r <= 0;
     o_stall_mem_r <= 0;
@@ -37,7 +37,7 @@ always_ff @(posedge clk) begin
 end
 
 always_ff @(posedge clk) begin
-  if (rst || i_branch_met) begin  // branch condition met -> pipeline aborted, don't stall
+  if (rst) begin  // branch condition met -> pipeline aborted, don't stall           // || i_branch_met
     stall_counter <= 0;
   end
   else if (i_mem_data_access != 0) begin

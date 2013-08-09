@@ -14,14 +14,16 @@ module control(
   o_addr_rd_r,
   o_registers_rd_en_r,
   o_addr_mode,
-  o_rd_sel
+  o_rd_sel,
+  o_mem_rd_mode_r,
+  o_mem_wr_mode_r
 );
 
 input   logic           clk, rst;
 input   logic[15:0]     i_ir_id;
 input   logic[ 3:0]     i_apsr;
 
-output  logic[ 1:0]     o_addr_mode;
+output  logic[ 1:0]     o_addr_mode, o_mem_rd_mode_r, o_mem_wr_mode_r;
 output  logic[ 2:0]     o_alu_sel;
 output  logic[ 3:0]     o_addr_rd_r;
 output  logic           o_stall_id, o_stall_ex, o_stall_mem, o_stall_wb, o_registers_rd_en_r, o_rd_sel;
@@ -38,23 +40,17 @@ assign o_stall_mem = stall_mem;
 assign o_stall_wb  = stall_wb;
 
 // temp
-
-// Mode ctrl
-always_comb begin
-  if (rst) begin
-    o_addr_mode = 0;
-  end
-  else if (ir_ex[15:11] == 5'b01101) begin // LDR
-    o_addr_mode = 3;  // 11: alu-addr (data memory)
-  end
-  else if (ir_ex[15:11] == 5'b01100) begin // STR
-    o_addr_mode = 3;
-  end
-  else begin
-    o_addr_mode = 0;
-  end
-end
 // temp end
+
+addr_switch addr_switch_inst (
+  .clk (clk),
+  .rst (rst),
+
+  .i_branch_met (branch_met),
+  .i_ir_ex (ir_ex),
+
+  .o_addr_mode (o_addr_mode)
+);
 
 stall_ctrl stall_ctrl_inst (
   .clk (clk),
@@ -77,7 +73,9 @@ ctrl_id ctrl_id_inst(
   
   .o_ir_ex_r (ir_ex),
   .o_alu_sel_r (o_alu_sel),
-  .o_mem_data_access_r(mem_data_access)
+  .o_mem_data_access_r(mem_data_access),
+  .o_mem_rd_mode_r(o_mem_rd_mode_r),
+  .o_mem_wr_mode_r(o_mem_wr_mode_r)
 );
 
 

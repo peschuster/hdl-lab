@@ -40,8 +40,8 @@ logic [ 3:0] apsr_alu;
 logic [ 2:0] alu_sel;
 
 // mem signals
-logic [ 1:0]            wr_mode;
-logic [ 1:0]            rd_mode;
+logic [ 1:0]            mem_wr_mode;
+logic [ 1:0]            mem_rd_mode;
 logic [31:0]            mem_do;
 logic [ADDR_WIDTH-1:0]  mem_addr;
 
@@ -79,7 +79,9 @@ control control_inst(
   .o_addr_rd_r (addr_rd_r),
   .o_registers_rd_en_r (rd_wr_en),
   .o_addr_mode (addr_mode),
-  .o_rd_sel (rd_sel)
+  .o_rd_sel (rd_sel),
+  .o_mem_rd_mode_r (mem_rd_mode),
+  .o_mem_wr_mode_r (mem_wr_mode)
 );
 
 //
@@ -97,9 +99,6 @@ addr_ctrl #(.MEM_DEPTH(MEM_DEPTH)) addr_ctrl_inst(
 );
 
 // memory
-assign wr_mode = 0;
-assign rd_mode = 1;
-
 mem_ctrl #(.MEM_DEPTH(MEM_DEPTH)) mem_ctrl_inst(
   .rst (rst),
   .clk (clk),
@@ -108,8 +107,8 @@ mem_ctrl #(.MEM_DEPTH(MEM_DEPTH)) mem_ctrl_inst(
   .i_cpu_data (rt_r),
   .i_mem_data (i_mem_do),  
 
-  .i_wr_mode (wr_mode),
-  .i_rd_mode (rd_mode),
+  .i_wr_mode (mem_wr_mode),
+  .i_rd_mode (mem_rd_mode),
 
   .o_mem_addr (o_mem_addr),
   .o_mem_data (o_mem_di),
