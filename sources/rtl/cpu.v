@@ -34,7 +34,7 @@ logic [ 3:0] apsr_r;
 logic [ 1:0] addr_mode; // 00: normal (+2), 01: alu-addr (ir memory), 10: mem-addr (pop), 11: alu-addr (data memory)
 logic [ 3:0] addr_rn_r, addr_rd_r, addr_rt_r;
 logic [31:0] imm_r;
-logic [31:0] rd_r, alu;
+logic [31:0] rd_r, rd_data, alu;
 logic [31:0] pc, pc_next, rn_r, rt_r;
 logic [ 3:0] apsr_alu;
 logic [ 2:0] alu_sel;
@@ -44,6 +44,9 @@ logic [ 1:0]            wr_mode;
 logic [ 1:0]            rd_mode;
 logic [31:0]            mem_do;
 logic [ADDR_WIDTH-1:0]  mem_addr;
+
+// rd select mux
+logic                   rd_sel;
 
 //
 logic [15:0]            ir_id;
@@ -75,7 +78,8 @@ control control_inst(
   .o_alu_sel (alu_sel),
   .o_addr_rd_r (addr_rd_r),
   .o_registers_rd_en_r (rd_wr_en),
-  .o_addr_mode (addr_mode)
+  .o_addr_mode (addr_mode),
+  .o_rd_sel (rd_sel)
 );
 
 //
@@ -143,6 +147,21 @@ decode decode_inst (
   .o_imm_r(imm_r)
 );
 
+//
+// WB stage
+
+// MUX for WB selection
+always_comb begin
+  if (rd_sel == 1) begin
+    // LDR --> Memory output 
+    rd_data <= mem_do;
+  end 
+  else begin
+    // None LDR  --> Rd
+    rd_data <= rd_r;
+  end
+end
+
 // Register file
 registers registers_inst (
   .clk (clk), 
@@ -153,7 +172,7 @@ registers registers_inst (
   .i_addr_rn (addr_rn_r), 
   .i_addr_rd (addr_rd_r), 
   .i_addr_rt (addr_rt_r),
-  .i_rd (rd_r), 
+  .i_rd (rd_data), 
   .i_pc (pc_next),
 
   .o_rn_r (rn_r), 

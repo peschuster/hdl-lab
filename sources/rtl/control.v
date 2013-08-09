@@ -13,7 +13,8 @@ module control(
   o_alu_sel,
   o_addr_rd_r,
   o_registers_rd_en_r,
-  o_addr_mode
+  o_addr_mode,
+  o_rd_sel
 );
 
 input   logic           clk, rst;
@@ -23,7 +24,7 @@ input   logic[ 3:0]     i_apsr;
 output  logic[ 1:0]     o_addr_mode;
 output  logic[ 2:0]     o_alu_sel;
 output  logic[ 3:0]     o_addr_rd_r;
-output  logic           o_stall_id, o_stall_ex, o_stall_mem, o_stall_wb, o_registers_rd_en_r;
+output  logic           o_stall_id, o_stall_ex, o_stall_mem, o_stall_wb, o_registers_rd_en_r, o_rd_sel;
 
         logic           stall_id, stall_ex, stall_mem, stall_wb, branch_met;
         logic[ 3:0]     mem_data_access;
@@ -101,7 +102,7 @@ ctrl_mem ctrl_mem_inst(
   
   .i_stall (stall_mem),
   .i_ir_mem (ir_2mem),
-  .o_ir_wb (ir_2wb),
+  .o_ir_wb_r (ir_2wb),
   .o_addr_rd_r (o_addr_rd_r),
   .o_registers_rd_en_r (o_registers_rd_en_r)
 );
@@ -109,11 +110,12 @@ ctrl_mem ctrl_mem_inst(
 
 
 ctrl_wb ctrl_wb_inst(
-  .clk (clk),
-  .rst (rst),
+//  .clk (clk),
+//  .rst (rst),
   
-  .i_stall (stall_wb),
-  .i_ir_wb (ir_2wb)
+//  .i_stall (stall_wb),
+  .i_ir_wb (ir_2wb),
+  .o_rd_sel (o_rd_sel)
 );
 
 

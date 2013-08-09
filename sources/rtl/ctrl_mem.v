@@ -4,7 +4,7 @@ module ctrl_mem (
   
   i_stall,
   i_ir_mem,
-  o_ir_wb,
+  o_ir_wb_r,
   o_addr_rd_r,
   o_registers_rd_en_r
 );
@@ -13,17 +13,17 @@ input   logic         clk, rst;
 input   logic         i_stall;
 input   logic[15:0]   i_ir_mem;
 
-output  logic[15:0]   o_ir_wb;
+output  logic[15:0]   o_ir_wb_r;
 output  logic         o_registers_rd_en_r;
 output  logic[3:0]    o_addr_rd_r;
 
 always_ff @(posedge clk) begin
   if(rst)
-    o_ir_wb <= 0;
+    o_ir_wb_r <= 0;
   else if(i_stall)
-    o_ir_wb <= o_ir_wb;
+    o_ir_wb_r <= o_ir_wb_r;
   else
-    o_ir_wb <= i_ir_mem;
+    o_ir_wb_r <= i_ir_mem;
 end
 
 always_ff @(posedge clk) begin
