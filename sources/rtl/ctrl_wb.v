@@ -19,6 +19,9 @@ always_comb begin
     5'b01101: begin // LDR
       o_rd_sel <= 1;
     end
+    5'b01001: begin // LDR (Literal to PC)
+      o_rd_sel <= 1;
+    end
     default:     begin // every other command
       o_rd_sel <= 0;  
     end

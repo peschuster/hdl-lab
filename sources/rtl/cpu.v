@@ -146,21 +146,6 @@ decode decode_inst (
   .o_imm_r(imm_r)
 );
 
-//
-// WB stage
-
-// MUX for WB selection
-always_comb begin
-  if (rd_sel == 1) begin
-    // LDR --> Memory output 
-    rd_data <= mem_do;
-  end 
-  else begin
-    // None LDR  --> Rd
-    rd_data <= rd_r;
-  end
-end
-
 // Register file
 registers registers_inst (
   .clk (clk), 
@@ -189,5 +174,22 @@ alu alu_inst(
   .o_result_r (alu),
   .o_apsr_r (apsr_alu)
 );
+
+
+
+//
+// WB stage
+
+// MUX for WB selection
+always_comb begin
+  if (rd_sel == 1) begin
+    // LDR --> Memory output 
+    rd_data <= mem_do;
+  end 
+  else begin
+    // None LDR  --> Rd
+    rd_data <= rd_r;
+  end
+end
 
 endmodule
