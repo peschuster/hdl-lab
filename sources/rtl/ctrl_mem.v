@@ -60,6 +60,10 @@ always_ff @(posedge clk) begin
             o_addr_rd_r <= i_ir_mem[2:0];
             o_registers_rd_en_r <= 1;
           end
+        9'b01001????: begin // LDR (literal - PC + imm8)
+            o_addr_rd_r <= i_ir_mem[10:8];
+            o_registers_rd_en_r <= 1;
+          end
         default:     begin // error
             o_addr_rd_r <= 0;
             o_registers_rd_en_r <= 0;

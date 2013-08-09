@@ -48,6 +48,10 @@ always_comb begin
         o_addrrn_r = i_ir[5:3];
         o_addrrt_r = 0;
       end
+    9'b01001????: begin // LDR (literal - PC + imm8)
+        o_addrrn_r = 15; // 15=PC
+        o_addrrt_r = 0;
+      end
     9'b01100????: begin // STR
         o_addrrn_r = i_ir[5:3];
         o_addrrt_r = i_ir[2:0];
@@ -93,6 +97,9 @@ always_ff @(posedge clk) begin
           end
         9'b01101????: begin // LDR
             o_imm_r <= i_ir[10:6];
+          end
+        9'b01001????: begin // LDR (literal - PC + imm8)
+            o_imm_r <= { i_ir[7:0], 2'b00 };
           end
         9'b01100????: begin // STR
             o_imm_r <= i_ir[10:6];

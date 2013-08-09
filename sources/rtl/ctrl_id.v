@@ -57,6 +57,9 @@ always_ff @(posedge clk) begin
         9'b01101????: begin // LDR
             o_alu_sel_r <= ALU_ADD;
           end
+        9'b01001????: begin // LDR (literal - PC + imm8)
+            o_alu_sel_r <= ALU_ADD;
+          end
         9'b01100????: begin // STR
             o_alu_sel_r <= ALU_ADD;
           end
@@ -85,10 +88,12 @@ always_ff @(posedge clk) begin
       5'b01101: begin // LDR
         o_mem_data_access_r <= 2;
       end
+      5'b01001: begin // LDR (literal - PC + imm8)
+        o_mem_data_access_r <= 2;
+      end
       5'b01100: begin // STR
         o_mem_data_access_r <= 2;
       end
-      
       default: begin
         o_mem_data_access_r <= 0;
       end
