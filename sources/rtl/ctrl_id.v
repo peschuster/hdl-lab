@@ -55,6 +55,9 @@ always_ff @(posedge clk) begin
         9'b0001110??: begin // ADD
             o_alu_sel_r <= ALU_ADD;
           end
+        9'b10101????: begin // ADD (SP + Imm)
+            o_alu_sel_r <= ALU_ADD;
+          end
         9'b101100001: begin // SUB SP
             o_alu_sel_r <= ALU_SUB;
           end
@@ -89,10 +92,12 @@ always_ff @(posedge clk) begin
     end
 end
 
-//Stall-control-logic
+// Mem access ctrl
 always_ff @(posedge clk) begin
   if(rst)
     o_mem_data_access_r <= 0;
+    o_mem_rd_mode_r <= MEM_MODE_16;
+    o_mem_wr_mode_r <= MEM_MODE_NONE;
   else begin
     casez (i_ir[15:11])
       5'b01101: begin // LDR

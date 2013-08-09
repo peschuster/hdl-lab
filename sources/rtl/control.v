@@ -68,7 +68,7 @@ ctrl_id ctrl_id_inst(
   .clk (clk),
   .rst (rst),
 
-  .i_stall (stall_id),
+  .i_stall (stall_ex),
   .i_ir (i_ir_id),
   
   .o_ir_ex_r (ir_ex),
@@ -84,7 +84,7 @@ ctrl_ex ctrl_ex_inst(
   .clk (clk),
   .rst (rst),
   
-  .i_stall (o_stall_ex),
+  .i_stall (o_stall_mem),
   .i_ir (ir_ex),
   .i_apsr (i_apsr),
   
@@ -98,7 +98,7 @@ ctrl_mem ctrl_mem_inst(
   .clk (clk),
   .rst (rst),
   
-  .i_stall (stall_mem),
+  .i_stall (stall_wb),
   .i_ir_mem (ir_2mem),
   .o_ir_wb_r (ir_2wb),
   .o_addr_rd_r (o_addr_rd_r),

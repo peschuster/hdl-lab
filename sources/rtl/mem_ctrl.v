@@ -110,7 +110,7 @@ end
 //Setting cpu_data after one cycle (after rd_mode_buf was set). 
 always_comb begin
   if (rd_mode_buf == MODE_32) begin
-    o_cpu_data = { mem_do, data_rd_32 };
+    o_cpu_data = { data_rd_32, mem_do };
   end
   else if (rd_mode_buf == MODE_8) begin
     o_cpu_data = addr_buf[0] == 1 ? mem_do[7:0] : mem_do[15:8];

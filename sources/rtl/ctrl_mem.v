@@ -20,9 +20,7 @@ output  logic[3:0]    o_addr_rd_r;
 always_ff @(posedge clk) begin
   if(rst)
     o_ir_wb_r <= 0;
-  else if(i_stall)
-    o_ir_wb_r <= o_ir_wb_r;
-  else
+  else if (i_stall == 0)
     o_ir_wb_r <= i_ir_mem;
 end
 
@@ -32,9 +30,8 @@ always_ff @(posedge clk) begin
       o_addr_rd_r <= 0;
       o_registers_rd_en_r <= 0;
     end
-  else if(i_stall) begin
+  else if (i_stall) begin
       o_registers_rd_en_r <= 0;
-      o_addr_rd_r <= o_addr_rd_r;
     end
   else
     begin
@@ -42,6 +39,10 @@ always_ff @(posedge clk) begin
       casez (i_ir_mem[15:7])
         9'b0001110??: begin // ADD
             o_addr_rd_r <= i_ir_mem[2:0];
+            o_registers_rd_en_r <= 1;
+          end
+        9'b10101????: begin // ADD (SP + Imm)
+            o_addr_rd_r <= i_ir_mem[10:8];
             o_registers_rd_en_r <= 1;
           end
         9'b101100001: begin // SUB SP

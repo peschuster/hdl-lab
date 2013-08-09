@@ -32,6 +32,10 @@ always_comb begin
         o_addrrn_r = i_ir[5:3];
         o_addrrt_r = 0;
       end
+    9'b10101????: begin // ADD (SP + Imm)
+        o_addrrn_r = 13; // 13=SP
+        o_addrrt_r = 0;
+      end
     9'b101100001: begin // SUB SP
         o_addrrn_r = 13; // 13=SP
         o_addrrt_r = 0;
@@ -85,6 +89,9 @@ always_ff @(posedge clk) begin
       casez (i_ir[15:7])
         9'b0001110??: begin // ADD
             o_imm_r <= i_ir[8:6];
+          end
+        9'b10101????: begin // ADD (SP + Imm)
+            o_imm_r <= { i_ir[7:0], 2'b00 };
           end
         9'b101100001: begin // SUB SP
             o_imm_r <= i_ir[6:0];

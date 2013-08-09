@@ -29,7 +29,7 @@ conditions conditions_inst (
 always_ff @(posedge clk) begin
   if(rst)
     o_ir_mem <= 0;
-  else
+  else if (i_stall == 0)
     o_ir_mem <= i_ir;
 end
 

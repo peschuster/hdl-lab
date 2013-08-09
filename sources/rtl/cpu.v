@@ -34,7 +34,7 @@ logic [ 3:0] apsr_r;
 logic [ 1:0] addr_mode; // 00: normal (+2), 01: alu-addr (ir memory), 10: mem-addr (pop), 11: alu-addr (data memory)
 logic [ 3:0] addr_rn_r, addr_rd_r, addr_rt_r;
 logic [31:0] imm_r;
-logic [31:0] rd_r, rd_data, alu;
+logic [31:0] rd_r, rd_data, alu, alu_out_r;
 logic [31:0] pc, pc_next, rn_r, rt_r;
 logic [ 3:0] apsr_alu;
 logic [ 2:0] alu_sel;
@@ -55,10 +55,16 @@ always_ff @(posedge clk) begin
   if (rst) begin
     rd_r <= 0;
     apsr_r <= 0;
+    alu_out_r <= 0;
   end
   else begin
-    rd_r <= alu;
-    apsr_r <= apsr_alu;
+    if (stall_mem == 0) begin
+      alu_out_r <= alu;
+      apsr_r <= apsr_alu;
+    end
+
+    if (stall_wb == 0)
+      rd_r <= alu_out_r;
   end
 end
 

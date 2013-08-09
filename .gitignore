@@ -3,5 +3,5 @@
 work/vsim/transcript
 work/vsim/work/*
 work/vsim/.nfs*
-work/vsim/sim.wlf
+work/vsim/vsim.wlf
 work/dc/*
