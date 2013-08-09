@@ -54,6 +54,13 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	mem_ctrl
 
+} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/stall_ctrl.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/stall_ctrl.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module stall_ctrl
+
+Top level modules:
+	stall_ctrl
+
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/addr_switch.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/addr_switch.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module addr_switch
@@ -109,13 +116,6 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 
 Top level modules:
 	memory
-
-} {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/cpu.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module cpu
-
-Top level modules:
-	cpu
 
 } {} {}} /home/vhdlp21/git/hdl-lab/sources/rtl/registers.v {1 {vlog -work work -vopt -sv /home/vhdlp21/git/hdl-lab/sources/rtl/registers.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
